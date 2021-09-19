@@ -1,0 +1,32 @@
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\bin\Debug\net5.0\Entidades.exe
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\bin\Debug\net5.0\Entidades.runtimeconfig.json
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\bin\Debug\net5.0\Entidades.runtimeconfig.dev.json
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\bin\Debug\net5.0\ref\Entidades.dll
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\obj\Debug\net5.0\Entidades.pdb
+C:\Users\pablo\source\repos\Cordoba.Pablo\Entidades\obj\Debug\net5.0\Entidades.genruntimeconfig.cache
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\bin\Debug\net5.0\Entidades.exe
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\bin\Debug\net5.0\Entidades.deps.json
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\bin\Debug\net5.0\Entidades.runtimeconfig.json
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\bin\Debug\net5.0\Entidades.runtimeconfig.dev.json
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\bin\Debug\net5.0\Entidades.dll
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\bin\Debug\net5.0\ref\Entidades.dll
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\bin\Debug\net5.0\Entidades.pdb
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\obj\Debug\net5.0\Entidades.dll
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\obj\Debug\net5.0\Entidades.pdb
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\Entidades\obj\Debug\net5.0\Entidades.genruntimeconfig.cache

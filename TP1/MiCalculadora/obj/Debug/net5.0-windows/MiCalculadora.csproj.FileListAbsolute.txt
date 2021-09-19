@@ -1,0 +1,50 @@
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\Entidades.deps.json
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\Entidades.runtimeconfig.json
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\Entidades.runtimeconfig.dev.json
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\Entidades.exe
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.exe
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.deps.json
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.runtimeconfig.json
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.runtimeconfig.dev.json
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.dll
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\ref\MiCalculadora.dll
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.pdb
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\Entidades.dll
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\bin\Debug\net5.0-windows\Entidades.pdb
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.AssemblyReference.cache
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.formCalculadora.resources
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.GenerateResource.cache
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.AssemblyInfoInputs.cache
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.AssemblyInfo.cs
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.CopyComplete
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.dll
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\ref\MiCalculadora.dll
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.pdb
+C:\Users\pablo\source\repos\Cordoba.Pablo\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.genruntimeconfig.cache
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.deps.json
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.runtimeconfig.json
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.runtimeconfig.dev.json
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.exe
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.exe
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.deps.json
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.runtimeconfig.json
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.runtimeconfig.dev.json
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.dll
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\ref\MiCalculadora.dll
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.pdb
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.dll
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.pdb
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.AssemblyReference.cache
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.formCalculadora.resources
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.GenerateResource.cache
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.GeneratedMSBuildEditorConfig.editorconfig
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.AssemblyInfoInputs.cache
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.AssemblyInfo.cs
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.CoreCompileInputs.cache
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.CopyComplete
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.dll
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\ref\MiCalculadora.dll
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.pdb
+D:\Material UTN\Programación 2A\TPS\Repo\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.genruntimeconfig.cache
