@@ -1,0 +1,15 @@
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\bin\Debug\net5.0\InputOutputLibrary.deps.json
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\bin\Debug\net5.0\InputOutputLibrary.dll
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\bin\Debug\net5.0\ref\InputOutputLibrary.dll
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\bin\Debug\net5.0\InputOutputLibrary.pdb
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\bin\Debug\net5.0\Entities.dll
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\bin\Debug\net5.0\Entities.pdb
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.csproj.AssemblyReference.cache
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.AssemblyInfoInputs.cache
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.AssemblyInfo.cs
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.csproj.CoreCompileInputs.cache
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.dll
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\obj\Debug\net5.0\ref\InputOutputLibrary.dll
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.pdb
+C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.csproj.CopyComplete
