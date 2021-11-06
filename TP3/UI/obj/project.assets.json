@@ -30,8 +30,8 @@
   "libraries": {
     "Entities/1.0.0": {
       "type": "project",
-      "path": "../TextAnalyzer/Entities.csproj",
-      "msbuildProject": "../TextAnalyzer/Entities.csproj"
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
     },
     "InputOutputLibrary/1.0.0": {
       "type": "project",
@@ -51,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\UI\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\UI\\UI.csproj",
+      "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\UI\\UI.csproj",
       "packagesPath": "C:\\Users\\PabloCordoba\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\UI\\obj\\",
+      "outputPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PabloCordoba\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -73,11 +73,11 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\InputOutputLibrary\\InputOutputLibrary.csproj": {
-              "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\InputOutputLibrary\\InputOutputLibrary.csproj"
+            "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\Entities\\Entities.csproj"
             },
-            "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\TextAnalyzer\\Entities.csproj": {
-              "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\TextAnalyzer\\Entities.csproj"
+            "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\InputOutputLibrary\\InputOutputLibrary.csproj": {
+              "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\InputOutputLibrary\\InputOutputLibrary.csproj"
             }
           }
         }

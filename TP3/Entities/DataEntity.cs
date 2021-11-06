@@ -9,12 +9,12 @@ namespace Entities
     public abstract class DataEntity
     {
         private int id;
-        private string textVersion;
+        private string textInfo;
 
-        public string TextVersion
+        public string TextInfo
         {
-            get { return textVersion; }
-            set { textVersion = value; }
+            get { return textInfo; }
+            set { textInfo = value; }
         }
 
 
@@ -27,7 +27,7 @@ namespace Entities
         public DataEntity()
         {
             this.id = Core.GenerateId();
-            textVersion = null;
+            textInfo = null;
         }
     }
 }

@@ -9,13 +9,15 @@ namespace Entities
     public class Wallet : DataEntity
     {
         private float balance;
-        private List<Movement> purchasesMade;
+        private List<Movement> moneyMovements;
+        private int idOwner;
 
         public Wallet() : this(0)
         { }
 
         public Wallet(float balance)
         {
+            moneyMovements = new List<Movement>();
             this.balance = balance;
         }
 
@@ -25,10 +27,10 @@ namespace Entities
             set { balance = value; }
         }
 
-        public List<Movement> PurchasesMade
+        public List<Movement> MoneyMovements
         {
-            get { return purchasesMade; }
-            set { purchasesMade = value; }
+            get { return moneyMovements; }
+            set { moneyMovements = value; }
         }
     }
 }

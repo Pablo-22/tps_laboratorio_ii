@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\ConsoleTests\\ConsoleTests.csproj": {}
+    "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\ConsoleTests\\ConsoleTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\ConsoleTests\\ConsoleTests.csproj": {
+    "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\ConsoleTests\\ConsoleTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\ConsoleTests\\ConsoleTests.csproj",
+        "projectUniqueName": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\ConsoleTests\\ConsoleTests.csproj",
         "projectName": "ConsoleTests",
-        "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\ConsoleTests\\ConsoleTests.csproj",
+        "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\ConsoleTests\\ConsoleTests.csproj",
         "packagesPath": "C:\\Users\\PabloCordoba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\ConsoleTests\\obj\\",
+        "outputPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\ConsoleTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PabloCordoba\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,11 +29,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\InputOutputLibrary\\InputOutputLibrary.csproj": {
-                "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\InputOutputLibrary\\InputOutputLibrary.csproj"
-              },
-              "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\TextAnalyzer\\Entities.csproj": {
-                "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\TextAnalyzer\\Entities.csproj"
+              "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\InputOutputLibrary\\InputOutputLibrary.csproj": {
+                "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\InputOutputLibrary\\InputOutputLibrary.csproj"
               }
             }
           }
@@ -66,73 +63,14 @@
         }
       }
     },
-    "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\InputOutputLibrary\\InputOutputLibrary.csproj": {
+    "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\InputOutputLibrary\\InputOutputLibrary.csproj",
-        "projectName": "InputOutputLibrary",
-        "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\InputOutputLibrary\\InputOutputLibrary.csproj",
-        "packagesPath": "C:\\Users\\PabloCordoba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\InputOutputLibrary\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\PabloCordoba\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/bromus-software/_packaging/bromus-webserver/nuget/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\TextAnalyzer\\Entities.csproj": {
-                "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\TextAnalyzer\\Entities.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\TextAnalyzer\\Entities.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\TextAnalyzer\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\TextAnalyzer\\Entities.csproj",
+        "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\PabloCordoba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Trabajo Práctico 3\\TP3\\Cordoba.Pablo.1E.TPFinal\\TextAnalyzer\\obj\\",
+        "outputPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PabloCordoba\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -150,6 +88,65 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\InputOutputLibrary\\InputOutputLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\InputOutputLibrary\\InputOutputLibrary.csproj",
+        "projectName": "InputOutputLibrary",
+        "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\InputOutputLibrary\\InputOutputLibrary.csproj",
+        "packagesPath": "C:\\Users\\PabloCordoba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\InputOutputLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PabloCordoba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/bromus-software/_packaging/bromus-webserver/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\TP3\\Entities\\Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InputOutputLibrary\InputOutputLibrary.csproj" />
-    <ProjectReference Include="..\TextAnalyzer\Entities.csproj" />
   </ItemGroup>
 
 </Project>

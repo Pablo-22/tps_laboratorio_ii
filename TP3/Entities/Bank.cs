@@ -39,7 +39,7 @@ namespace Entities
             Bank.Users.Add(new User("Luciana"));
 
 
-            Bank.Wallets.Add(new Wallet());
+            Bank.Wallets.Add(new Wallet(45800));
         }
     }
 }

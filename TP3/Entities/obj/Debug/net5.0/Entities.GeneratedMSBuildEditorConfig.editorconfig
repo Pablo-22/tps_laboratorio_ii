@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Entities
-build_property.ProjectDir = C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\TextAnalyzer\
+build_property.ProjectDir = C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\Entities\

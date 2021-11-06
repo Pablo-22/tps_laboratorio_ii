@@ -15,7 +15,7 @@ namespace InputOutputLibrary
                     Directory.CreateDirectory(PathsGenerator<T>.TxtPath);
                 }
 
-                File.WriteAllText(path, entity.TextVersion);
+                File.WriteAllText(path, entity.TextInfo);
             }
             catch
             {
@@ -35,7 +35,7 @@ namespace InputOutputLibrary
 
                 string body = File.ReadAllText(path);
 
-                entity.TextVersion = body;
+                entity.TextInfo = body;
             }
             catch
             {
