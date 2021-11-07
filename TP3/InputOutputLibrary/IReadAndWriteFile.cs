@@ -7,7 +7,7 @@ using Entities;
 
 namespace InputOutputLibrary
 {
-    public interface IReadableWritableFile<T>
+    public interface IReadAndWriteFile<T>
     {
         public void Export(string path, T entity);
         public void Import(string path, out T entity);

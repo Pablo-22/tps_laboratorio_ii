@@ -18,3 +18,7 @@ C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1
 C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\ConsoleTests\obj\Debug\net5.0\ref\ConsoleTests.dll
 C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\ConsoleTests\obj\Debug\net5.0\ConsoleTests.pdb
 C:\Users\PabloCordoba\Desktop\Developing\Trabajo Práctico 3\TP3\Cordoba.Pablo.1E.TPFinal\ConsoleTests\obj\Debug\net5.0\ConsoleTests.genruntimeconfig.cache
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\ConsoleTests\obj\Debug\net5.0\ConsoleTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\ConsoleTests\obj\Debug\net5.0\ConsoleTests.AssemblyInfoInputs.cache
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\ConsoleTests\obj\Debug\net5.0\ConsoleTests.AssemblyInfo.cs
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\ConsoleTests\obj\Debug\net5.0\ConsoleTests.csproj.CoreCompileInputs.cache

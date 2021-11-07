@@ -4,7 +4,7 @@ using Entities;
 
 namespace InputOutputLibrary
 {
-    public class Txt<T> : IReadableWritableFile<T> where T : DataEntity
+    public class Txt<T> : IReadAndWriteFile<T> where T : DataEntity
     {
         public void Export(string path, T entity)
         {

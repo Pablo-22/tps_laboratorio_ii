@@ -8,18 +8,21 @@ using Entities;
 
 namespace InputOutputLibrary
 {
-    static class PathsGenerator<T> where T : DataEntity
+    public static class PathsGenerator<T> where T : DataEntity
     {
         private static string xmlPath;
         private static string txtPath;
+        private static string jsonPath;
 
         public static string XmlPath { get => xmlPath; }
         public static string TxtPath { get => txtPath; }
+        public static string JsonPath { get => jsonPath; }
 
         static PathsGenerator()
         {
-            PathsGenerator<T>.xmlPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\XmlFiles\");
-            PathsGenerator<T>.txtPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\TxtFiles\");
+            PathsGenerator<T>.xmlPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Wallet\XmlFiles\");
+            PathsGenerator<T>.txtPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Wallet\TxtFiles\");
+            PathsGenerator<T>.jsonPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Wallet\JsonFiles\");
         }
 
 
@@ -32,6 +35,11 @@ namespace InputOutputLibrary
         public static string xmlGeneratePath(T entity)
         {
             string fileName = PathsGenerator<T>.XmlPath + entity.Id.ToString() + ".xml";
+            return fileName;
+        }
+        public static string jsonGeneratePath(T entity)
+        {
+            string fileName = PathsGenerator<T>.JsonPath + entity.Id.ToString() + ".json";
             return fileName;
         }
     }

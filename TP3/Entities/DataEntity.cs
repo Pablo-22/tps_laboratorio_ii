@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Entities
 {
+    [Serializable]
+    [XmlInclude(typeof(Movement))]
+    [XmlInclude(typeof(User))]
+    [XmlInclude(typeof(Wallet))]
+
     public abstract class DataEntity
     {
         private int id;

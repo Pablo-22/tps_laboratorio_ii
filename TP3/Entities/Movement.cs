@@ -11,6 +11,7 @@ namespace Entities
         private float amount;
         private int idWallet;
         private DateTime purchaseDate;
+        private eType type;
 
         public float Amount
         {
@@ -31,18 +32,30 @@ namespace Entities
             get { return idWallet; }
             set { idWallet = value; }
         }
-
-        public Movement(float amount, int idWallet, DateTime purchaseDate) : base()
+        public eType Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
+        public Movement(float amount, int idWallet, DateTime purchaseDate, eType isExpense) : base()
         {
             this.amount = amount;
             this.idWallet = idWallet;
             this.purchaseDate = purchaseDate;
+            this.type = isExpense;
+
         }
 
-        public Movement(float amount, int idWallet) : this(amount, idWallet, DateTime.Now)
+        public Movement(float amount, int idWallet, eType isExpense) : this(amount, idWallet, DateTime.Now, isExpense)
         { }
 
-        public Movement() : this(0, -1, DateTime.Now)
+        public Movement() : this(0, -1, DateTime.Now, eType.Gasto)
         { }
+
+        public enum eType
+        {
+            Gasto,
+            Ingreso
+        }
     }
 }

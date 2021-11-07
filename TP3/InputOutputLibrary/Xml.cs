@@ -10,24 +10,19 @@ using Entities;
 
 namespace InputOutputLibrary
 {
-    public class Xml<T> : IReadableWritableFile<T> where T : DataEntity
+    public class Xml<T> : IReadAndWriteFile<T> where T : DataEntity
     {
         public Xml()
         {
         }
 
-        /// <summary>
-        /// Exporta en xml los datos que entran por parámetro.
-        /// </summary>
-        /// <param name="entity"></param>
-        /// <returns></returns>
         public void Export(string path, T entity)
         {
             try
             {
                 if (!Directory.Exists(PathsGenerator<T>.XmlPath))
                 {
-                    Directory.CreateDirectory(PathsGenerator<T>.TxtPath);
+                    Directory.CreateDirectory(PathsGenerator<T>.XmlPath);
                 }
 
                 if (path != null)
@@ -45,15 +40,6 @@ namespace InputOutputLibrary
             }
         }
 
-
-
-
-        /// <summary>
-        /// Importa los datos en xml que encuentra en la ruta que entra por parámetro.
-        /// </summary>
-        /// <param name="path"></param>
-        /// <param name="entity"></param>
-        /// <returns></returns>
         public void Import(string path, out T entity)
         {
             entity = default;

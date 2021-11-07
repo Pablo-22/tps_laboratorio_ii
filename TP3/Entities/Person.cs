@@ -17,13 +17,10 @@ namespace Entities
         }
 
 
+        public Person(): this(null)
+        {  }
 
-        public Person()
-        {
-            name = null;
-        }
-
-        public Person(string name) : this()
+        public Person(string name) : base()
         {
             this.name = name;
         }

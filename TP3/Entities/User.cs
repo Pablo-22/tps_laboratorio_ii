@@ -39,7 +39,7 @@ namespace Entities
             userInfo.Append(this.Id + " - ");
             userInfo.Append(this.Name);
 
-            return base.ToString();
+            return userInfo.ToString();
         }
     }
 }
