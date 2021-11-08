@@ -56,12 +56,12 @@ namespace InputOutputLibrary
                 }
                 else
                 {
-                    throw new Exception("No existe la carpeta o el archivo.");
+                    throw new PathDoNotExistException("No existe la carpeta o el archivo.");
                 }
             }
-            catch (Exception)
+            catch (Exception error)
             {
-                throw new Exception($"Error al importar el archivo en: {path}.");
+                throw new ImportFailureException($"Error al importar el archivo en: {path}.", error);
             }
         }
     }

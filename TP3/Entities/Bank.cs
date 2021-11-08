@@ -28,9 +28,11 @@ namespace Entities
         {
             Bank.users = new List<User>();
             Bank.wallets = new List<Wallet>();
-
-            //Hardcode();
         }
+
+        /// <summary>
+        /// Hardcodeo. Para el caso que sea necesario.
+        /// </summary>
         public static void Hardcode()
         {
             Bank.Users.Add(new User("Pablo"));
@@ -102,6 +104,19 @@ namespace Entities
             return walletIndex;
         }
 
+        public static int SearchUserIndexByWalletId(int id)
+        {
+            int userIndex = -1;
+            for (int i = 0; i < Bank.Users.Count; i++)
+            {
+                if (Bank.Users[i].IdWallet == id)
+                {
+                    userIndex = i;
+                }
+            }
+            return userIndex;
+        }
+
         public static int SearchWalletIndexByUserId(int id)
         {
             int userIndex = Bank.SearchUserIndexById(id);
@@ -109,15 +124,112 @@ namespace Entities
 
             return walletIndex;
         }
+
         
 
 
 
-        public static void getUserWithBiggestMovement(Movement.eType type)
+        public static int GetTotalMovements()
         {
+            int movementsCount = 0;
 
+            Bank.Wallets.ForEach(wallet =>
+            {
+                movementsCount += wallet.MoneyMovements.Count;
+            });
+
+            return movementsCount;
         }
 
+        public static int GetTodayMovements()
+        {
+            int movementsCount = 0;
 
+            Bank.Wallets.ForEach(wallet =>
+            {
+                var movements = wallet.MoneyMovements.FindAll(x => { return x.PurchaseDate.Date == DateTime.Now.Date; });
+                movementsCount += movements.Count;
+            });
+            return movementsCount;
+        }
+
+        public static float GetBiggestMovementAmount()
+        {
+            float biggestMovement = 0;
+
+            Bank.Wallets.ForEach(wallet =>
+            {
+                wallet.MoneyMovements.ForEach(movement =>
+                {
+                    if (movement.Amount > biggestMovement)
+                    {
+                        biggestMovement = movement.Amount;
+                    }
+                });
+            });
+            return biggestMovement;
+        }
+
+        public static List<User> GetUsersWithBiggestMovementAmount()
+        {
+            List<User> usersWithbiggestMovements = new List<User>();
+            float biggestAmount = GetBiggestMovementAmount();
+
+            Bank.Wallets.ForEach(wallet =>
+            {
+                wallet.MoneyMovements.ForEach(movement =>
+                {
+                    if (movement.Amount == biggestAmount)
+                    {
+                        usersWithbiggestMovements.Add(Bank.Users[SearchUserIndexByWalletId(movement.IdWallet)]);
+                    }
+                });
+            });
+            return usersWithbiggestMovements;
+        }
+
+        public static int GetLargestAmountOfMovements()
+        {
+            int largestAmountOfMovements = 0;
+            Bank.Wallets.ForEach(wallet =>
+            {
+                if (wallet.MoneyMovements.Count > largestAmountOfMovements)
+                {
+                    largestAmountOfMovements = wallet.MoneyMovements.Count;
+                }
+            });
+            return largestAmountOfMovements;
+        }
+
+        public static List<User> GetUsersWithMoreMovements()
+        {
+            List<User> usersWithMoreMovements = new List<User>();
+            float largestAmountOfMovements = GetLargestAmountOfMovements();
+
+            Bank.Wallets.ForEach(wallet =>
+            {
+                if (wallet.MoneyMovements.Count == largestAmountOfMovements)
+                {
+                    usersWithMoreMovements.Add(Bank.Users[SearchUserIndexByWalletId(wallet.Id)]);
+                }
+            });
+            return usersWithMoreMovements;
+        }
+
+        public static float getBiggestIncomeAmount()
+        {
+            float biggestIncome = 0;
+            Bank.Wallets.ForEach(wallet =>
+            {
+                wallet.MoneyMovements.ForEach(movement =>
+                {
+                    if (movement.Amount > biggestIncome)
+                    {
+                        biggestIncome = movement.Amount;
+                    }
+                });
+            });
+            return biggestIncome;
+        }
     }
 }

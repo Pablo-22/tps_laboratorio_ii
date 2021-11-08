@@ -57,5 +57,15 @@ namespace Entities
             Gasto,
             Ingreso
         }
+
+        public override string ToString()
+        {
+            StringBuilder movementInfo = new StringBuilder();
+            movementInfo.Append(this.Id + " - ");
+            movementInfo.Append(this.Amount + " - ");
+            movementInfo.Append("Wallet ID: " + this.idWallet);
+
+            return movementInfo.ToString();
+        }
     }
 }

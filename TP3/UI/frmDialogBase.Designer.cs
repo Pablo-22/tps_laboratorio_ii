@@ -35,34 +35,41 @@ namespace UI
             // 
             // btnAccept
             // 
-            this.btnAccept.Location = new System.Drawing.Point(506, 837);
-            this.btnAccept.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAccept.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAccept.FlatAppearance.BorderSize = 0;
+            this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccept.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAccept.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnAccept.Location = new System.Drawing.Point(443, 628);
             this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(358, 59);
+            this.btnAccept.Size = new System.Drawing.Size(313, 44);
             this.btnAccept.TabIndex = 0;
             this.btnAccept.Text = "Aceptar";
-            this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.UseVisualStyleBackColor = false;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(506, 920);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCancel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnCancel.Location = new System.Drawing.Point(443, 690);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(358, 59);
+            this.btnCancel.Size = new System.Drawing.Size(313, 44);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // frmDialogBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1371, 1024);
+            this.ClientSize = new System.Drawing.Size(1200, 768);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAccept);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmDialogBase";
             this.Text = "frmDialogBase";
             this.ResumeLayout(false);

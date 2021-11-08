@@ -156,7 +156,7 @@ namespace UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 768);
+            this.ClientSize = new System.Drawing.Size(1340, 768);
             this.Controls.Add(this.dataGridMovements);
             this.Controls.Add(this.lblMovements);
             this.Controls.Add(this.txtUserName);

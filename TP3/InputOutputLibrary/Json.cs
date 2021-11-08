@@ -48,16 +48,23 @@ namespace InputOutputLibrary
                 if (Directory.Exists(PathsGenerator<T>.JsonPath) && File.Exists(path))
                 {
                     string dataCollected = File.ReadAllText(path);
-                    entity = JsonSerializer.Deserialize<T>(dataCollected);
+                    if (!string.IsNullOrEmpty(dataCollected))
+                    {
+                        entity = JsonSerializer.Deserialize<T>(dataCollected);
+                    }
+                    else
+                    {
+                        throw new ImportFailureException();
+                    }
                 }
                 else
                 {
-                    throw new Exception("No existe la carpeta o el archivo.");
+                    throw new PathDoNotExistException("No existe la carpeta o el archivo.");
                 }
             }
-            catch (Exception)
+            catch (Exception error)
             {
-                throw new Exception($"Error al importar el archivo en: {path}.");
+                throw new ImportFailureException($"Error al importar el archivo en: {path}.", error);
             }
         }
     }

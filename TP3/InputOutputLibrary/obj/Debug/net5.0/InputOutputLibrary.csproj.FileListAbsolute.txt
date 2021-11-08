@@ -24,7 +24,6 @@ C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\InputOu
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\InputOutputLibrary\bin\Debug\net5.0\Entities.dll
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\InputOutputLibrary\bin\Debug\net5.0\Entities.pdb
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.csproj.AssemblyReference.cache
-C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.csproj.CopyComplete
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.dll
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\InputOutputLibrary\obj\Debug\net5.0\ref\InputOutputLibrary.dll
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\InputOutputLibrary\obj\Debug\net5.0\InputOutputLibrary.pdb

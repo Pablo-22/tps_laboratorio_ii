@@ -37,9 +37,9 @@ namespace UI
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnExit.Location = new System.Drawing.Point(1148, 12);
+            this.btnExit.Location = new System.Drawing.Point(1293, 12);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(40, 51);
+            this.btnExit.Size = new System.Drawing.Size(35, 51);
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -50,7 +50,7 @@ namespace UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 768);
+            this.ClientSize = new System.Drawing.Size(1340, 768);
             this.Controls.Add(this.btnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBase";

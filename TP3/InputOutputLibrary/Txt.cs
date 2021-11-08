@@ -30,16 +30,16 @@ namespace InputOutputLibrary
             {
                 if (!Directory.Exists(PathsGenerator<T>.TxtPath) || !File.Exists(path))
                 {
-                    throw new Exception("No existe la carpeta o el archivo.");
+                    throw new PathDoNotExistException("No existe la carpeta o el archivo.");
                 }
 
                 string body = File.ReadAllText(path);
 
                 entity.TextInfo = body;
             }
-            catch
+            catch (Exception error)
             {
-                throw new Exception($"Error al importar el archivo de texto en : {path}.");
+                throw new ImportFailureException($"Error al importar el archivo en: {path}.", error);
             }
         }
     }
