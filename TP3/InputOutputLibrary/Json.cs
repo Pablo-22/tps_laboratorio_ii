@@ -33,7 +33,7 @@ namespace InputOutputLibrary
                     File.WriteAllText(path, serializedEntity);
                 }
             }
-            catch (Exception)
+            catch
             {
                 throw new Exception($"Error al exportar la entidad de ID: {entity.Id}.");
             }
