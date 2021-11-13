@@ -10,6 +10,22 @@ namespace Entities
     {
         private static List<User> users;
         private static List<Wallet> wallets;
+        private static List<string> expensesCategories;
+        private static List<string> incomesCategories;
+
+        public static List<string> ExpensesCategories
+        {
+            get { return expensesCategories; }
+            set { expensesCategories = value; }
+        }
+
+        public static List<string> IncomesCategories
+        {
+            get { return incomesCategories; }
+            set { incomesCategories = value; }
+        }
+
+
 
         public static List<User> Users
         {
@@ -28,6 +44,9 @@ namespace Entities
         {
             Bank.users = new List<User>();
             Bank.wallets = new List<Wallet>();
+            Bank.incomesCategories = new List<string>();
+            Bank.expensesCategories = new List<string>();
+            setCategories();
         }
 
         /// <summary>
@@ -54,6 +73,24 @@ namespace Entities
             {
                 Bank.ConnectUserWithWallet(Users[i].Id, Wallets[i].Id);
             }
+        }
+
+        private static void setCategories()
+        {
+            Bank.ExpensesCategories.Add("Varios");
+            Bank.ExpensesCategories.Add("Indumentaria");
+            Bank.ExpensesCategories.Add("Alimentos");
+            Bank.ExpensesCategories.Add("Servicios");
+            Bank.ExpensesCategories.Add("Entretenimiento");
+            Bank.ExpensesCategories.Add("Viajes");
+
+
+            Bank.IncomesCategories.Add("Varios");
+            Bank.IncomesCategories.Add("Trabajo");
+            Bank.IncomesCategories.Add("Préstamo");
+            Bank.IncomesCategories.Add("Devolución");
+            Bank.IncomesCategories.Add("Negocios");
+            Bank.IncomesCategories.Add("Venta");
         }
 
 
@@ -119,8 +156,14 @@ namespace Entities
 
         public static int SearchWalletIndexByUserId(int id)
         {
+            Console.WriteLine(Bank.Users);
+            Console.WriteLine(Bank.Wallets);
+            int walletIndex = -1;
             int userIndex = Bank.SearchUserIndexById(id);
-            int walletIndex = Bank.SearchWalletIndexById(Bank.Users[userIndex].IdWallet);
+            if (userIndex > -1)
+            {
+                walletIndex = Bank.SearchWalletIndexById(Bank.Users[userIndex].IdWallet);
+            }
 
             return walletIndex;
         }
@@ -129,16 +172,34 @@ namespace Entities
 
 
 
-        public static int GetTotalMovements()
+        public static float GetTotalIncomesAmount()
         {
-            int movementsCount = 0;
+            float totalAmount = 0;
 
-            Bank.Wallets.ForEach(wallet =>
+            Core.UserWallet.MoneyMovements.ForEach(movement =>
             {
-                movementsCount += wallet.MoneyMovements.Count;
+                if (movement.Type == Movement.eType.Ingreso)
+                {
+                    totalAmount += movement.Amount;
+                }
             });
 
-            return movementsCount;
+            return totalAmount;
+        }
+
+        public static float GetTotalExpensesAmount()
+        {
+            float totalAmount = 0;
+
+            Core.UserWallet.MoneyMovements.ForEach(movement =>
+            {
+                if (movement.Type == Movement.eType.Gasto)
+                {
+                    totalAmount += movement.Amount;
+                }
+            });
+
+            return totalAmount;
         }
 
         public static int GetTodayMovements()

@@ -36,7 +36,7 @@ namespace UI
             string path = PathsGenerator<BankSnapshot>.jsonGeneratePath(snapshot);
             try
             {
-                snapshotIO.Import(path, out snapshot);
+                snapshotIO.Import(path, ref snapshot);
                 Bank.LoadFromSnapshot(snapshot);
             }
             catch
@@ -77,6 +77,18 @@ namespace UI
                 dataGridMovements.Rows[n].Cells[2].Value = x.Type;
             });
             dataGridMovements.Sort(dataGridMovements.Columns[0], ListSortDirection.Descending);
+
+            panelMovements.Controls.Clear();
+            int index = 0;
+            int x = 0;
+            int y = 0;
+            this.selectedWallet.MoneyMovements.ForEach(movement =>
+            {
+                panelMovements.Controls.Add(new ucMovement(movement.PurchaseDate, movement.Amount, movement.Type, movement.Category));
+                panelMovements.Controls[index].Location = new Point(x, y);
+                y += 100;
+                index++;
+            });
         }
 
         private void loadWalletData()
@@ -90,7 +102,7 @@ namespace UI
 
         private void loadQuerys()
         {
-            lblTotalMovements.Text = Bank.GetTotalMovements().ToString();
+            //lblTotalMovements.Text = Bank.GetTotalMovements().ToString();
             lblTodayMovements.Text = Bank.GetTodayMovements().ToString();
 
             StringBuilder usersWithBiggestMovementInfo = new StringBuilder();
@@ -119,7 +131,7 @@ namespace UI
         {
             if (Bank.Users.Count > 0 && SelectedWallet.Balance > 0)
             {
-                frmNewExpenseDialog newExpense = new frmNewExpenseDialog(SelectedUser, SelectedWallet, Movement.eType.Ingreso);
+                frmNewExpenseDialog newExpense = new frmNewExpenseDialog();
                 newExpense.ShowDialog();
                 if (newExpense.DialogResult == DialogResult.OK)
                 {
@@ -132,7 +144,7 @@ namespace UI
         {
             if (Bank.Users.Count > 0 && SelectedWallet.Balance > 0)
             {
-                frmNewExpenseDialog newExpense = new frmNewExpenseDialog(SelectedUser, SelectedWallet, Movement.eType.Gasto);
+                frmNewExpenseDialog newExpense = new frmNewExpenseDialog();
                 newExpense.ShowDialog();
                 if (newExpense.DialogResult == DialogResult.OK)
                 {

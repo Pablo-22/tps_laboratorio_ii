@@ -34,11 +34,12 @@ namespace Entities
             set { moneyMovements = value; }
         }
 
-        public bool SaveNewMovement(float amount, DateTime movementDate, Movement.eType isExpense)
+        public bool SaveNewMovement(float amount, DateTime movementDate, Movement.eType isExpense, string category)
         {
-            Movement newMovement = new Movement(amount,this.Id, movementDate, isExpense);
+            Movement newMovement = new Movement(amount,this.Id, movementDate, isExpense, category);
             this.MoneyMovements.Add(newMovement);
             setBalance(newMovement);
+            this.SortMovementsByMoreRecentDate();
 
             return true;
         }
@@ -56,6 +57,11 @@ namespace Entities
             {
                 this.Balance += movement.Amount;
             }
+        }
+
+        public void SortMovementsByMoreRecentDate()
+        {
+            this.moneyMovements.Sort((movementA, movementB) => movementB.PurchaseDate.CompareTo(movementA.PurchaseDate));
         }
     }
 }

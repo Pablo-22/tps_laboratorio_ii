@@ -9,7 +9,15 @@ namespace Entities
     public class User : Person
     {
         private int idWallet;
+        private string password;
 
+
+
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
 
         public int IdWallet
         {

@@ -1,13 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="frmBase.cs">
+    <Compile Update="Bases\frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmDialogBase.cs">
+    <Compile Update="Bases\frmDialogBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmNewExpenseDialog.cs">
+    <Compile Update="Main\frmMainDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\frmMovements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\frmNewExpenseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\frmStats.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmWalletBase.cs">
@@ -16,5 +25,19 @@
     <Compile Update="frmWalletVisualize.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Main\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="User Controls\ucMovement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\ucStat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

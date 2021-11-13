@@ -24,7 +24,7 @@ namespace ConsoleTests
 
            //xmlFile.Export(test);
 
-            xmlFile.Import(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\TextFilesInformation\2.xml"), out test);
+            xmlFile.Import(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\TextFilesInformation\2.xml"), ref test);
 
         }
     }

@@ -10,6 +10,23 @@ namespace Entities
     public static class Core
     {
         private static int lastId;
+        private static Wallet userWallet;
+        private static User actualUser;
+
+        public static Wallet UserWallet
+        {
+            get { return userWallet; }
+            set { userWallet = value; }
+        }
+
+
+        public static User ActualUser
+        {
+            get { return actualUser; }
+            set { actualUser = value; }
+        }
+
+
 
         public static int LastId
         {
@@ -111,6 +128,42 @@ namespace Entities
                 return false;
             }
             return true;
+        }
+
+        public static void LogOut()
+        {
+            Core.ActualUser = null;
+            Core.UserWallet = null;
+        }
+
+
+        /// <summary>
+        /// Recibe los datos de un usuario y los busca en la lista.
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="password"></param>
+        /// <returns>Devuelve true si lo encuentra y false si no lo encuentra.
+        /// Si puede loguear, cambia el estado del atributo UsuarioLogueado, por el usuario encontrado.</returns>
+        public static bool LoguearUsuario(string name, string password)
+        {
+            bool exit = false;
+
+            foreach (User user in Bank.Users)
+            {
+                if (user.Name == name && user.Password == password)
+                {
+                    Core.ActualUser = user;
+                    Core.UserWallet = Bank.Wallets[Bank.SearchWalletIndexById(user.IdWallet)];
+                    exit = true;
+                }
+            }
+            if (exit == false)
+            {
+                throw new InvalidUserException();
+            }
+
+            return exit;
         }
     }
 }

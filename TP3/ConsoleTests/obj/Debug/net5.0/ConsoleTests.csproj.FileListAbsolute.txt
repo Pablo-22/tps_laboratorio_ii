@@ -34,7 +34,6 @@ C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\Console
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\ConsoleTests\bin\Debug\net5.0\InputOutputLibrary.pdb
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\ConsoleTests\bin\Debug\net5.0\Entities.pdb
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\ConsoleTests\obj\Debug\net5.0\ConsoleTests.csproj.AssemblyReference.cache
-C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\ConsoleTests\obj\Debug\net5.0\ConsoleTests.csproj.CopyComplete
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\ConsoleTests\obj\Debug\net5.0\ConsoleTests.dll
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\ConsoleTests\obj\Debug\net5.0\ref\ConsoleTests.dll
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\ConsoleTests\obj\Debug\net5.0\ConsoleTests.pdb

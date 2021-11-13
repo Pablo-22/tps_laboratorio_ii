@@ -12,6 +12,7 @@ namespace Entities
         private int idWallet;
         private DateTime purchaseDate;
         private eType type;
+        private string category;
 
         public float Amount
         {
@@ -19,6 +20,14 @@ namespace Entities
             set { amount = value; }
         }
 
+        public string Category
+        {
+            get { return category; }
+            set
+            {
+                category = setCategory(value);
+            }
+        }
 
         public DateTime PurchaseDate
         {
@@ -37,19 +46,20 @@ namespace Entities
             get { return type; }
             set { type = value; }
         }
-        public Movement(float amount, int idWallet, DateTime purchaseDate, eType isExpense) : base()
+        public Movement(float amount, int idWallet, DateTime purchaseDate, eType isExpense, string category) : base()
         {
             this.amount = amount;
             this.idWallet = idWallet;
             this.purchaseDate = purchaseDate;
             this.type = isExpense;
+            this.category = category;
 
         }
 
-        public Movement(float amount, int idWallet, eType isExpense) : this(amount, idWallet, DateTime.Now, isExpense)
+        public Movement(float amount, int idWallet, eType type) : this(amount, idWallet, DateTime.Now, type, "Varios")
         { }
 
-        public Movement() : this(0, -1, DateTime.Now, eType.Gasto)
+        public Movement() : this(0, -1, DateTime.Now, eType.Gasto, "Varios")
         { }
 
         public enum eType
@@ -57,6 +67,7 @@ namespace Entities
             Gasto,
             Ingreso
         }
+
 
         public override string ToString()
         {
@@ -66,6 +77,32 @@ namespace Entities
             movementInfo.Append("Wallet ID: " + this.idWallet);
 
             return movementInfo.ToString();
+        }
+
+        public string setCategory(string category)
+        {
+            string categoryToReturn = "Varios";
+            if (this.Type == eType.Gasto)
+            {
+                Bank.ExpensesCategories.ForEach(cat =>
+                {
+                    if (cat == category)
+                    {
+                        categoryToReturn = category;
+                    }
+                });
+            }
+            else
+            {
+                Bank.IncomesCategories.ForEach(cat =>
+                {
+                    if (cat == category)
+                    {
+                        categoryToReturn = category;
+                    }
+                });
+            }
+            return categoryToReturn;
         }
     }
 }

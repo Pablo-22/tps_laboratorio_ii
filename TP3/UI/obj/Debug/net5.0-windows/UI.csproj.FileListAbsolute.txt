@@ -51,4 +51,10 @@ C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\Debug\net5.0-windows\ref\UI.dll
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\Debug\net5.0-windows\UI.pdb
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\Debug\net5.0-windows\UI.genruntimeconfig.cache
-C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\Debug\net5.0-windows\UI.csproj.CopyComplete
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\Debug\net5.0-windows\UI.ucMovement.resources
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\Debug\net5.0-windows\UI.frmMainDashboard.resources
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\Debug\net5.0-windows\UI.Properties.Resources.resources
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\Debug\net5.0-windows\UI.frmMovements.resources
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\Debug\net5.0-windows\UI.frmStats.resources
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\Debug\net5.0-windows\UI.ucStat.resources
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UI\obj\Debug\net5.0-windows\UI.frmLogin.resources

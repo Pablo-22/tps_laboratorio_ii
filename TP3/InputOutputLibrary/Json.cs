@@ -39,10 +39,8 @@ namespace InputOutputLibrary
             }
         }
 
-        public void Import(string path, out T entity)
+        public void Import(string path, ref T entity)
         {
-            entity = default;
-
             try
             {
                 if (Directory.Exists(PathsGenerator<T>.JsonPath) && File.Exists(path))

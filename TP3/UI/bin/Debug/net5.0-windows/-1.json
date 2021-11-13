@@ -3,36 +3,42 @@
     {
       "IdWallet": 8,
       "Name": "Pablo",
+      "Password": "12345",
       "TextInfo": null,
       "Id": 2
     },
     {
       "IdWallet": 9,
       "Name": "Juana",
+      "Password": "12345",
       "TextInfo": null,
       "Id": 3
     },
     {
       "IdWallet": 10,
       "Name": "Jose",
+      "Password": "12345",
       "TextInfo": null,
       "Id": 4
     },
     {
       "IdWallet": 11,
       "Name": "Pepe",
+      "Password": "12345",
       "TextInfo": null,
       "Id": 5
     },
     {
       "IdWallet": 12,
       "Name": "Ramiro",
+      "Password": "12345",
       "TextInfo": null,
       "Id": 6
     },
     {
       "IdWallet": 13,
       "Name": "Luciana",
+      "Password": "12345",
       "TextInfo": null,
       "Id": 7
     }

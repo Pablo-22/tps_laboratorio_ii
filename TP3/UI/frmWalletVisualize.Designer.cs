@@ -45,6 +45,7 @@ namespace UI
             this.lblUserWithBiggestMovement = new System.Windows.Forms.Label();
             this.lblTotalMovements = new System.Windows.Forms.Label();
             this.lblBiggestIncome = new System.Windows.Forms.Label();
+            this.panelMovements = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lstUsers
@@ -147,7 +148,7 @@ namespace UI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(813, 475);
+            this.label2.Location = new System.Drawing.Point(447, 477);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(335, 26);
             this.label2.TabIndex = 20;
@@ -157,7 +158,7 @@ namespace UI
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(813, 165);
+            this.label4.Location = new System.Drawing.Point(447, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(344, 26);
             this.label4.TabIndex = 21;
@@ -167,7 +168,7 @@ namespace UI
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(813, 328);
+            this.label6.Location = new System.Drawing.Point(447, 330);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(433, 26);
             this.label6.TabIndex = 23;
@@ -176,7 +177,7 @@ namespace UI
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(813, 32);
+            this.label7.Location = new System.Drawing.Point(447, 34);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(279, 26);
             this.label7.TabIndex = 24;
@@ -186,7 +187,7 @@ namespace UI
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(813, 608);
+            this.label8.Location = new System.Drawing.Point(447, 610);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(245, 26);
             this.label8.TabIndex = 25;
@@ -195,9 +196,9 @@ namespace UI
             // lblUserWithMoreMovements
             // 
             this.lblUserWithMoreMovements.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUserWithMoreMovements.Location = new System.Drawing.Point(813, 507);
+            this.lblUserWithMoreMovements.Location = new System.Drawing.Point(447, 509);
             this.lblUserWithMoreMovements.Name = "lblUserWithMoreMovements";
-            this.lblUserWithMoreMovements.Size = new System.Drawing.Size(471, 90);
+            this.lblUserWithMoreMovements.Size = new System.Drawing.Size(312, 90);
             this.lblUserWithMoreMovements.TabIndex = 26;
             this.lblUserWithMoreMovements.Text = "-";
             // 
@@ -205,7 +206,7 @@ namespace UI
             // 
             this.lblTodayMovements.AutoSize = true;
             this.lblTodayMovements.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTodayMovements.Location = new System.Drawing.Point(813, 209);
+            this.lblTodayMovements.Location = new System.Drawing.Point(447, 211);
             this.lblTodayMovements.Name = "lblTodayMovements";
             this.lblTodayMovements.Size = new System.Drawing.Size(24, 36);
             this.lblTodayMovements.TabIndex = 27;
@@ -214,9 +215,9 @@ namespace UI
             // lblUserWithBiggestMovement
             // 
             this.lblUserWithBiggestMovement.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUserWithBiggestMovement.Location = new System.Drawing.Point(813, 362);
+            this.lblUserWithBiggestMovement.Location = new System.Drawing.Point(447, 364);
             this.lblUserWithBiggestMovement.Name = "lblUserWithBiggestMovement";
-            this.lblUserWithBiggestMovement.Size = new System.Drawing.Size(471, 98);
+            this.lblUserWithBiggestMovement.Size = new System.Drawing.Size(270, 98);
             this.lblUserWithBiggestMovement.TabIndex = 28;
             this.lblUserWithBiggestMovement.Text = "-";
             // 
@@ -224,7 +225,7 @@ namespace UI
             // 
             this.lblTotalMovements.AutoSize = true;
             this.lblTotalMovements.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTotalMovements.Location = new System.Drawing.Point(813, 67);
+            this.lblTotalMovements.Location = new System.Drawing.Point(447, 69);
             this.lblTotalMovements.Name = "lblTotalMovements";
             this.lblTotalMovements.Size = new System.Drawing.Size(24, 36);
             this.lblTotalMovements.TabIndex = 29;
@@ -234,17 +235,26 @@ namespace UI
             // 
             this.lblBiggestIncome.AutoSize = true;
             this.lblBiggestIncome.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblBiggestIncome.Location = new System.Drawing.Point(813, 646);
+            this.lblBiggestIncome.Location = new System.Drawing.Point(447, 648);
             this.lblBiggestIncome.Name = "lblBiggestIncome";
             this.lblBiggestIncome.Size = new System.Drawing.Size(24, 36);
             this.lblBiggestIncome.TabIndex = 30;
             this.lblBiggestIncome.Text = "-";
+            // 
+            // panelMovements
+            // 
+            this.panelMovements.AutoScroll = true;
+            this.panelMovements.Location = new System.Drawing.Point(893, 44);
+            this.panelMovements.Name = "panelMovements";
+            this.panelMovements.Size = new System.Drawing.Size(373, 685);
+            this.panelMovements.TabIndex = 31;
             // 
             // frmWalletVisualize
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 768);
+            this.Controls.Add(this.panelMovements);
             this.Controls.Add(this.lblBiggestIncome);
             this.Controls.Add(this.lblTotalMovements);
             this.Controls.Add(this.lblUserWithBiggestMovement);
@@ -286,6 +296,7 @@ namespace UI
             this.Controls.SetChildIndex(this.lblUserWithBiggestMovement, 0);
             this.Controls.SetChildIndex(this.lblTotalMovements, 0);
             this.Controls.SetChildIndex(this.lblBiggestIncome, 0);
+            this.Controls.SetChildIndex(this.panelMovements, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,5 +320,6 @@ namespace UI
         private System.Windows.Forms.Label lblUserWithBiggestMovement;
         private System.Windows.Forms.Label lblTotalMovements;
         private System.Windows.Forms.Label lblBiggestIncome;
+        private System.Windows.Forms.Panel panelMovements;
     }
 }
