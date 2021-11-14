@@ -41,8 +41,8 @@ namespace UI
             InitializeComponent();
             this.statsIsActive = false;
             this.movementsIsActive = false;
-            this.stats = new frmStats();
             this.movements = new frmMovements();
+            this.stats = new frmStats(this.movements);
         }
 
         private void LoadUserData()
@@ -50,8 +50,8 @@ namespace UI
             lblNumActualBalance.Text = "$" + Core.UserWallet.Balance.ToString("##,##,##,##0.00");
             lblUserName.Text = Core.ActualUser.Name;
             lblNumWalletId.Text = Core.UserWallet.Id.ToString();
-            lblNumTotalIncomes.Text = "$" + Bank.GetTotalExpensesAmount().ToString("##,##,##,##0.00");
-            lblNumTotalExpenses.Text = "$" + Bank.GetTotalIncomesAmount().ToString("##,##,##,##0.00");
+            lblNumTotalExpenses.Text = "$" + Bank.GetTotalExpensesAmount().ToString("##,##,##,##0.00");
+            lblNumTotalIncomes.Text = "$" + Bank.GetTotalIncomesAmount().ToString("##,##,##,##0.00");
         }
 
         private void onNewMovement(object sender, EventArgs e)
