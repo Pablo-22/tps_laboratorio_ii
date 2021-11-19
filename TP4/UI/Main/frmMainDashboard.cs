@@ -65,32 +65,7 @@ namespace UI
         {
             movements.newMovement += onNewMovement;
             this.IsLogged(false);
-
-            BankSnapshot snapshot = new BankSnapshot(Bank.Users, Bank.Wallets);
-
-            Json<BankSnapshot> snapshotIO = new Json<BankSnapshot>();
-            try
-            {
-                snapshotIO.Import(PathsGenerator.JsonPath, snapshot.Id.ToString(), ref snapshot);
-                Bank.LoadFromSnapshot(snapshot);
-            }
-            catch
-            {
-                try
-                {
-                    if (!File.Exists("-1.json"))
-                    {
-                        throw new PathDoNotExistException();
-                    }
-                    string dataCollected = File.ReadAllText("-1.json");
-                    snapshot = JsonSerializer.Deserialize<BankSnapshot>(dataCollected);
-                    Bank.LoadFromSnapshot(snapshot);
-                }
-                catch
-                {
-                    Bank.Hardcode();
-                }
-            }
+            Core.GetProjectConfig();
         }
 
         private void label1_Click(object sender, EventArgs e)

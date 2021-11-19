@@ -159,25 +159,24 @@ namespace Entities.SystemCore
         /// <param name="password"></param>
         /// <returns>Devuelve true si lo encuentra y false si no lo encuentra.
         /// Si puede loguear, cambia el estado del atributo UsuarioLogueado, por el usuario encontrado.</returns>
-        public static bool LoguearUsuario(string name, string password)
+        public static void LoguearUsuario(string name, string password)
         {
-            bool exit = false;
+            Core.ActualUser = null;
+            Core.UserWallet = null;
 
-            foreach (User user in Bank.Users)
+            Core.ActualUser = DbService.GetUserByCredentials(name, password);
+            if (ActualUser != null)
             {
-                if (user.Name == name && user.Password == password)
+                Core.UserWallet = DbService.GetWalletById(Core.ActualUser.Id);
+                if (UserWallet != null)
                 {
-                    Core.ActualUser = user;
-                    Core.UserWallet = Bank.Wallets[Bank.SearchWalletIndexById(user.IdWallet)];
-                    exit = true;
+                    Core.UserWallet.MoneyMovements = DbService.GetMovements(Core.UserWallet.Id);
                 }
             }
-            if (exit == false)
+            else
             {
                 throw new InvalidUserException();
             }
-
-            return exit;
         }
 
 
@@ -187,7 +186,7 @@ namespace Entities.SystemCore
 
             Json<ProjectConfigurationData> configDataSerializer = new Json<ProjectConfigurationData>();
 
-            configDataSerializer.Import("", "config.json", ref config);
+            configDataSerializer.Import(@"..\..\..\..\", "config.json", ref config);
 
             Core.ConfigData = config;
         }

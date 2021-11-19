@@ -25,6 +25,13 @@ namespace Entities.DataBaseActions
             command.Connection = connection;
         }
 
+        public static void newCommandType()
+        {
+            command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.Connection = connection;
+        }
+
 
         public static List<User> GetUsers()
         {
@@ -35,6 +42,7 @@ namespace Entities.DataBaseActions
                     DbService.connection.Open();
                 }
 
+                newCommandType();
                 DbService.command.CommandText = "Select * from Users";
 
 
@@ -70,6 +78,7 @@ namespace Entities.DataBaseActions
                     DbService.connection.Open();
                 }
 
+                newCommandType();
                 DbService.command.CommandText = "Select * from Users where Name = @name and Password = @password";
                 DbService.command.Parameters.AddWithValue("@name", name);
                 DbService.command.Parameters.AddWithValue("@password", password);
@@ -103,6 +112,7 @@ namespace Entities.DataBaseActions
                     DbService.connection.Open();
                 }
 
+                newCommandType();
                 DbService.command.CommandText = "Select * from Wallets where Id = @id";
                 DbService.command.Parameters.AddWithValue("@id", id);
 
@@ -133,6 +143,7 @@ namespace Entities.DataBaseActions
                     DbService.connection.Open();
                 }
 
+                newCommandType();
                 DbService.command.CommandText = "Select * from Wallets";
 
 
@@ -167,6 +178,7 @@ namespace Entities.DataBaseActions
                     DbService.connection.Open();
                 }
 
+                newCommandType();
                 DbService.command.CommandText = "Select * from Movements where IdWallet = @idWallet";
                 DbService.command.Parameters.AddWithValue("@idWallet", idWallet);
 
