@@ -23,6 +23,7 @@ namespace UI
         public frmMovements movements;
         private bool statsIsActive;
         private bool movementsIsActive;
+
         public event EventHandler logIn;
         public event EventHandler logOut;
 
