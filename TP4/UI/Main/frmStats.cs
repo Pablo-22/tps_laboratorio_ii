@@ -34,47 +34,50 @@ namespace UI
         public void LoadHeaderValues()
         {
 
-            lblMonthName.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Now.Month);
             bool nowIsMore;
             bool initialValueIsNull;
-            lblExpensesPercentage.Text = Core.UserWallet.CompareNowWithPreviousMonth(Movement.eType.Gasto, null, out nowIsMore, out initialValueIsNull).ToString("0.00");
+            if (Core.UserWallet != null)
+            {
+                lblMonthName.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Now.Month);
+                lblExpensesPercentage.Text = Core.UserWallet.CompareNowWithPreviousMonth(Movement.eType.Gasto, null, out nowIsMore, out initialValueIsNull).ToString("0.00");
             
-            if (initialValueIsNull)
-            {
-                float auxPercentage = float.Parse(lblExpensesPercentage.Text);
-                lblExpensesPercentage.Text += "%";
-            }
-            else
-            {
-                lblExpensesPercentage.Text = "$" + lblExpensesPercentage.Text;
-            }
+                if (initialValueIsNull)
+                {
+                    float auxPercentage = float.Parse(lblExpensesPercentage.Text);
+                    lblExpensesPercentage.Text += "%";
+                }
+                else
+                {
+                    lblExpensesPercentage.Text = "$" + lblExpensesPercentage.Text;
+                }
 
-            if (nowIsMore)
-            {
-                lblExpensesMoreOrLess.Text = "más que el mes pasado";
-            }
-            else
-            {
-                lblExpensesMoreOrLess.Text = "menos que el mes pasado";
-            }
+                if (nowIsMore)
+                {
+                    lblExpensesMoreOrLess.Text = "más que el mes pasado";
+                }
+                else
+                {
+                    lblExpensesMoreOrLess.Text = "menos que el mes pasado";
+                }
 
-            lblIncomesPercentage.Text = Core.UserWallet.CompareNowWithPreviousMonth(Movement.eType.Ingreso,null, out nowIsMore, out initialValueIsNull).ToString("0.00");
-            if (initialValueIsNull)
-            {
-                lblIncomesPercentage.Text += "%";
-            }
-            else
-            {
-                lblIncomesPercentage.Text = "$" + lblIncomesPercentage.Text;
-            }
+                lblIncomesPercentage.Text = Core.UserWallet.CompareNowWithPreviousMonth(Movement.eType.Ingreso,null, out nowIsMore, out initialValueIsNull).ToString("0.00");
+                if (initialValueIsNull)
+                {
+                    lblIncomesPercentage.Text += "%";
+                }
+                else
+                {
+                    lblIncomesPercentage.Text = "$" + lblIncomesPercentage.Text;
+                }
 
-            if (nowIsMore)
-            {
-                lblIncomesMoreOrLess.Text = "más que el mes pasado";
-            }
-            else
-            {
-                lblIncomesMoreOrLess.Text = "menos que el mes pasado";
+                if (nowIsMore)
+                {
+                    lblIncomesMoreOrLess.Text = "más que el mes pasado";
+                }
+                else
+                {
+                    lblIncomesMoreOrLess.Text = "menos que el mes pasado";
+                }
             }
         }
 
@@ -99,13 +102,17 @@ namespace UI
                         pnlStats.Controls.Clear();
                         Bank.ExpensesCategories.ForEach(category =>
                         {
-                            monthTotal = Core.UserWallet.getMonthTotal(DateTime.Now, Movement.eType.Gasto, category);
-                            percentage = Core.UserWallet.CompareNowWithPreviousMonth(Movement.eType.Gasto, category, out nowIsMore, out initialValueIsNull);
-                            previousMonthTotal = Core.UserWallet.getMonthTotal(DateTime.Now.AddMonths(-1), Movement.eType.Gasto, category);
-                            pnlStats.Controls.Add(new ucStat(category, monthTotal, previousMonthTotal, percentage, nowIsMore, initialValueIsNull));
-                            pnlStats.Controls[index].Location = new Point(x, y);
-                            y += 135;
-                            index++;
+                            if (Core.UserWallet != null)
+                            {
+                                monthTotal = Core.UserWallet.getMonthTotal(DateTime.Now, Movement.eType.Gasto, category);
+                                percentage = Core.UserWallet.CompareNowWithPreviousMonth(Movement.eType.Gasto, category, out nowIsMore, out initialValueIsNull);
+                                previousMonthTotal = Core.UserWallet.getMonthTotal(DateTime.Now.AddMonths(-1), Movement.eType.Gasto, category);
+
+                                pnlStats.Controls.Add(new ucStat(category, monthTotal, previousMonthTotal, percentage, nowIsMore, initialValueIsNull));
+                                pnlStats.Controls[index].Location = new Point(x, y);
+                                y += 135;
+                                index++;
+                            }
                         });
                     });
                 }

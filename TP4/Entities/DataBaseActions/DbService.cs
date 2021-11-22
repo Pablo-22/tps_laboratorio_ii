@@ -59,6 +59,10 @@ namespace Entities.DataBaseActions
                 return userList;
 
             }
+            catch
+            {
+                return null;
+            }
             finally
             {
                 connection.Close();
@@ -95,6 +99,10 @@ namespace Entities.DataBaseActions
                 }
                 return user;
             }
+            catch
+            {
+                return null;
+            }
             finally
             {
                 connection.Close();
@@ -129,6 +137,10 @@ namespace Entities.DataBaseActions
                     user.TextInfo = Convert.ToString(reader["TextInfo"]);
                 }
                 return user;
+            }
+            catch
+            {
+                return null;
             }
             finally
             {
@@ -166,6 +178,10 @@ namespace Entities.DataBaseActions
                 }
                 return user;
             }
+            catch
+            {
+                return null;
+            }
             finally
             {
                 connection.Close();
@@ -199,6 +215,10 @@ namespace Entities.DataBaseActions
                     wallet.Balance = !string.IsNullOrEmpty(reader["Balance"].ToString()) ? Convert.ToSingle(reader["Balance"]) : 0;
                 }
                 return wallet;
+            }
+            catch
+            {
+                return null;
             }
             finally
             {
@@ -236,6 +256,10 @@ namespace Entities.DataBaseActions
                 }
                 return walletList;
 
+            }
+            catch
+            {
+                return null;
             }
             finally
             {
@@ -280,6 +304,10 @@ namespace Entities.DataBaseActions
                 }
                 return listMovements;
             }
+            catch
+            {
+                return null;
+            }
             finally
             {
                 connection.Close();
@@ -319,6 +347,10 @@ namespace Entities.DataBaseActions
                 }
                 return movement;
             }
+            catch
+            {
+                return null;
+            }
             finally
             {
                 connection.Close();
@@ -331,7 +363,7 @@ namespace Entities.DataBaseActions
         }
 
 
-        public static void InsertMovement(Movement movement)
+        public static bool InsertMovement(Movement movement)
         {
             SqlConnection connection = new SqlConnection();
             try
@@ -365,7 +397,15 @@ namespace Entities.DataBaseActions
                 command.Parameters.AddWithValue("@Type", (int)movement.Type);
                 command.Parameters.AddWithValue("@Category", movement.Category);
 
-                int rows = command.ExecuteNonQuery();
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
             }
             finally
             {
@@ -408,6 +448,10 @@ namespace Entities.DataBaseActions
                 }
                 return -1;
             }
+            catch
+            {
+                return -1;
+            }
             finally
             {
                 connection.Close();
@@ -435,6 +479,10 @@ namespace Entities.DataBaseActions
                 {
                     return (int)reader["Id"];
                 }
+                return -1;
+            }
+            catch
+            {
                 return -1;
             }
             finally
@@ -466,12 +514,16 @@ namespace Entities.DataBaseActions
                 }
                 return -1;
             }
+            catch
+            {
+                return -1;
+            }
             finally
             {
                 connection.Close();
             }
         }
-        public static void UpdateWalletBalance(Wallet wallet)
+        public static bool UpdateWalletBalance(Wallet wallet)
         {
             SqlConnection connection = new SqlConnection();
             try
@@ -489,7 +541,15 @@ namespace Entities.DataBaseActions
                 command.Parameters.AddWithValue("@id", wallet.Id);
 
 
-                command.ExecuteNonQuery();
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
             }
             finally
             {
@@ -497,7 +557,7 @@ namespace Entities.DataBaseActions
             }
         }
 
-        public static void UpdateUserWalletId(User user)
+        public static bool UpdateUserWalletId(User user)
         {
             SqlConnection connection = new SqlConnection();
             try
@@ -515,7 +575,15 @@ namespace Entities.DataBaseActions
                 command.Parameters.AddWithValue("@id", user.Id);
 
 
-                command.ExecuteNonQuery();
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
             }
             finally
             {
@@ -523,7 +591,7 @@ namespace Entities.DataBaseActions
             }
         }
 
-        public static User InsertUser(User user)
+        public static bool InsertUser(User user)
         {
             SqlConnection connection = new SqlConnection();
             try
@@ -557,9 +625,15 @@ namespace Entities.DataBaseActions
                 command.Parameters.AddWithValue("@WalletId", user.IdWallet);
 
 
-                command.ExecuteNonQuery();
-
-                return user;
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
             }
             finally
             {
@@ -567,7 +641,7 @@ namespace Entities.DataBaseActions
             }
         }
 
-        public static void InsertWallet(Wallet wallet)
+        public static bool InsertWallet(Wallet wallet)
         {
             SqlConnection connection = new SqlConnection();
             try
@@ -595,7 +669,15 @@ namespace Entities.DataBaseActions
                 command.Parameters.AddWithValue("@Balance", wallet.Balance);
 
 
-                command.ExecuteNonQuery();
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
             }
             finally
             {

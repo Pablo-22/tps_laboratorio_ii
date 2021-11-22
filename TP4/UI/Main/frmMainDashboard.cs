@@ -91,19 +91,16 @@ namespace UI
             this.logIn += onLogIn;
             this.logOut += onLogOut;
             this.IsLogged(false);
-            Core.GetProjectConfig();
+            try
+            {
+                Core.GetProjectConfig();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se ha podido cargar el archivo config.json\n\n Por favor, verifique el archivo e intente nuevamente.", "ATENCIÓN");
+                btnLogInLogOut.Enabled = false;
+            }
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblShowMovements_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnShowMovements_Click(object sender, EventArgs e)
         {
             if (!this.FrmMovementsIsActive)
@@ -152,6 +149,7 @@ namespace UI
             btnExport.Enabled = isLogged;
             btnShowMovements.Enabled = isLogged;
             btnShowStats.Enabled = isLogged;
+            btnSave.Enabled = isLogged;
 
             if (isLogged)
             {

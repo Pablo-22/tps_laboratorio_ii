@@ -19,12 +19,6 @@
     <Compile Update="Main\frmStats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmWalletBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="frmWalletVisualize.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Main\Login.cs">
       <SubType>Form</SubType>
     </Compile>

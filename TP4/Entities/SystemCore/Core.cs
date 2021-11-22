@@ -118,10 +118,10 @@ namespace Entities.SystemCore
             Core.UserWallet = null;
 
             Core.ActualUser = DbService.GetUserByCredentials(name, password);
-            if (ActualUser.IdWallet > -1)
+            if (Core.ActualUser != null && ActualUser.IdWallet > -1)
             {
                 Core.UserWallet = DbService.GetWalletById(Core.ActualUser.IdWallet);
-                if (UserWallet.Id > -1)
+                if (Core.UserWallet != null && UserWallet.Id > -1)
                 {
                     Core.UserWallet.MoneyMovements = DbService.GetMovements(Core.UserWallet.Id);
                 }
@@ -141,7 +141,7 @@ namespace Entities.SystemCore
         public static void SignIn(string name, string password)
         {
             User newUser = DbService.GetUserByName(name);
-            if (newUser.IdWallet == -1 && newUser.Id == -1)
+            if (newUser != null && newUser.IdWallet == -1 && newUser.Id == -1)
             {
 
                 Wallet newWallet = new Wallet(0);
