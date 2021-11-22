@@ -17,6 +17,20 @@ namespace Entities.DataBaseActions
         static DbService()
         { }
 
+        public static void TestConnection()
+        {
+            SqlConnection connection = new SqlConnection();
+            try
+            {
+                connection.ConnectionString = Core.ConfigData.ConnectionString;
+                connection.Open();
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public static SqlCommand newCommand(SqlConnection connection)
         {
             SqlCommand command = new SqlCommand();

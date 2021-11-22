@@ -91,13 +91,17 @@ namespace UI
             this.logIn += onLogIn;
             this.logOut += onLogOut;
             this.IsLogged(false);
+
+            MessageBox.Show("Probando conexión con la base de datos...\n\nSi nota una demora en este proceso, " +
+                "revise la ruta de conexión a la base de datos", "Cargando...");
+
             try
             {
                 Core.GetProjectConfig();
             }
             catch (Exception)
             {
-                MessageBox.Show("No se ha podido cargar el archivo config.json\n\n Por favor, verifique el archivo e intente nuevamente.", "ATENCIÓN");
+                MessageBox.Show("No se ha podido cargar correctamente el archivo config.json\n\n Por favor, verifíquelo e intente nuevamente.", "ATENCIÓN");
                 btnLogInLogOut.Enabled = false;
             }
         }
@@ -181,15 +185,15 @@ namespace UI
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            List<User> usersList = DbService.GetUsers();
-            List<Wallet> walletList = DbService.GetWallets();
+            Bank.Users = DbService.GetUsers();
+            Bank.Wallets = DbService.GetWallets();
 
-            walletList.ForEach(wallet =>
+            Bank.Wallets.ForEach(wallet =>
             {
                 wallet.MoneyMovements = DbService.GetMovements(wallet.Id);
             });
 
-            BankSnapshot bankSnapshot = new BankSnapshot(usersList, walletList);
+            BankSnapshot bankSnapshot = new BankSnapshot(Bank.Users, Bank.Wallets);
 
             Json<BankSnapshot> snapshotIO = new Json<BankSnapshot>();
 

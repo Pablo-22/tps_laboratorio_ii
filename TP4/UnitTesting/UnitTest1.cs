@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Entities.InputOutput;
 using Entities.WalletEntities;
 using Entities.SystemCore;
-
+using Entities.DataBaseActions;
 
 namespace UnitTesting
 {
@@ -10,7 +10,7 @@ namespace UnitTesting
     public class UnitTest1
     {
         [TestMethod]
-        public void TestXmlSerialization()
+        public void TestXmlSerializationHappyPath()
         {
             Person newPerson = new Person("Soy un Unit Testing personificado");
             Xml<Person> xml = new Xml<Person>();
@@ -38,6 +38,26 @@ namespace UnitTesting
             txt.Import(path, ref destinationPerson);
 
             Assert.AreEqual(newPerson.TextInfo, destinationPerson.TextInfo);
+        }
+
+        [TestMethod]
+        public void TestExtensionMethod()
+        {
+            Person newPerson = new Person();
+            newPerson.TextInfo = "Soy un Unit Testing personificado";
+
+            bool result = newPerson.SearchStringOnEntity("Testing", newPerson =>
+            {
+                return newPerson.TextInfo;
+            });
+
+            bool result2 = newPerson.SearchStringOnEntity("****", newPerson =>
+            {
+                return newPerson.TextInfo;
+            });
+
+            Assert.IsTrue(result);
+            Assert.IsFalse(result2);
         }
     }
 }

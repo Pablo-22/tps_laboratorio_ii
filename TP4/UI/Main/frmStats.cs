@@ -85,6 +85,7 @@ namespace UI
         {
             return Task.Run(() =>
             {
+                this.ResetDefaultText();
                 int index = 0;
                 int x = 0;
                 int y = 0;

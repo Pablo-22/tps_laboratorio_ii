@@ -105,14 +105,13 @@ namespace Entities.SystemCore
 
 
         /// <summary>
-        /// Recibe los datos de un usuario y los busca en la lista.
-        /// 
+        /// Recibe los datos de un usuario y los busca en la base de datos.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="password"></param>
-        /// <returns>Devuelve true si lo encuentra y false si no lo encuentra.
-        /// Si puede loguear, cambia el estado del atributo UsuarioLogueado, por el usuario encontrado.</returns>
-        public static void LoguearUsuario(string name, string password)
+        /// Si puede loguear, establece el usuario actual y su wallet con los datos del usuario encontrado.
+        /// Si no puede, arroja una excepción del tipo InvalidUserException.
+        public static void LogIn(string name, string password)
         {
             Core.ActualUser = null;
             Core.UserWallet = null;
@@ -134,10 +133,11 @@ namespace Entities.SystemCore
 
         /// <summary>
         /// Comprueba que no exista un usuario con el mismo nombre recibido por parámetro,
-        /// y si no lo encuentra, lo crea y lo añade a la lista.
+        /// y si no lo encuentra, lo crea y lo añade a la base de datos.
         /// </summary>
         /// <param name="nombreDeUsuario"></param>
         /// <param name="password"></param>
+        /// Si lo encuentra, arroja una excepción del tipo InvalidUserException
         public static void SignIn(string name, string password)
         {
             User newUser = DbService.GetUserByName(name);
@@ -157,6 +157,10 @@ namespace Entities.SystemCore
         }
 
 
+        /// <summary>
+        /// Importa el archivo de configuración del proyecto que contiene la connection string.
+        /// Este archivo debe estar al mismo nivel que la solución.
+        /// </summary>
         public static void GetProjectConfig()
         {
             ProjectConfigurationData config = new ProjectConfigurationData("testeando");
@@ -166,6 +170,7 @@ namespace Entities.SystemCore
             configDataSerializer.Import(@"..\..\..\..\", "config.json", ref config);
 
             Core.ConfigData = config;
+            DbService.TestConnection();
         }
     }
 }

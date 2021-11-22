@@ -11,8 +11,14 @@ namespace ConsoleTests
     {
         static void Main(string[] args)
         {
-
-            Core.GetProjectConfig();
+            try
+            {
+                Core.GetProjectConfig()
+            }
+            catch
+            {
+                Console.WriteLine("No se ha podido cargar exitosamente el archivo config.json con la ruta de la base de datos.");
+            }
             string userName = "Pablo";
             string password = "12345";
 

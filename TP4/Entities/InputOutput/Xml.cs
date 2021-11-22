@@ -37,7 +37,7 @@ namespace Entities.InputOutput
             }
             catch (Exception)
             {
-                throw new Exception($"Error al exportar la entidad de ID: {entity.Id}.");
+                throw new ExportFailureException($"Error al exportar la entidad de ID: {entity.Id}.");
             }
         }
 

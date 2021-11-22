@@ -33,7 +33,7 @@ namespace UI
             {
                 try
                 {
-                    Core.LoguearUsuario(txtNombreDeUsuario.Text, txtContrasenia.Text);
+                    Core.LogIn(txtNombreDeUsuario.Text, txtContrasenia.Text);
                     this.DialogResult = DialogResult.OK;
                 }
                 catch(InvalidUserException)
