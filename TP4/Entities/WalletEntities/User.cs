@@ -30,17 +30,24 @@ namespace Entities.WalletEntities
 
         public User() : base()
         {
-            this.IdWallet = -1;
+            this.idWallet = -1;
         }
 
         public User(string name) : base(name)
         {
-            this.IdWallet = -1;
+            this.idWallet = -1;
+        }
+
+        public User(string name, string password) : this(name, -1)
+        {
+            this.password = password;
+            DbService.InsertUser(this);
+            this.Id = DbService.getBiggestIdUser();
         }
 
         public User(string name, int idWallet) : base(name)
         {
-            this.IdWallet = idWallet;
+            this.idWallet = idWallet;
         }
 
 

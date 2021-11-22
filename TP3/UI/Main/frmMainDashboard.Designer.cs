@@ -42,6 +42,7 @@ namespace UI
             this.btnShowMovements = new System.Windows.Forms.Button();
             this.btnShowStats = new System.Windows.Forms.Button();
             this.btnLogInLogOut = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUserName
@@ -181,7 +182,7 @@ namespace UI
             this.btnShowStats.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnShowStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowStats.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnShowStats.Location = new System.Drawing.Point(20, 325);
+            this.btnShowStats.Location = new System.Drawing.Point(20, 322);
             this.btnShowStats.Name = "btnShowStats";
             this.btnShowStats.Size = new System.Drawing.Size(251, 37);
             this.btnShowStats.TabIndex = 14;
@@ -206,6 +207,23 @@ namespace UI
             this.btnLogInLogOut.UseVisualStyleBackColor = true;
             this.btnLogInLogOut.Click += new System.EventHandler(this.btnLogInLogOut_Click);
             // 
+            // btnSave
+            // 
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.Location = new System.Drawing.Point(20, 380);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(251, 37);
+            this.btnSave.TabIndex = 16;
+            this.btnSave.Text = "Guardar            ";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // frmMainDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -214,6 +232,7 @@ namespace UI
             this.BackgroundImage = global::UI.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnLogInLogOut);
             this.Controls.Add(this.btnShowStats);
             this.Controls.Add(this.btnShowMovements);
@@ -253,5 +272,6 @@ namespace UI
         private System.Windows.Forms.Button btnShowMovements;
         private System.Windows.Forms.Button btnShowStats;
         private System.Windows.Forms.Button btnLogInLogOut;
+        private System.Windows.Forms.Button btnSave;
     }
 }

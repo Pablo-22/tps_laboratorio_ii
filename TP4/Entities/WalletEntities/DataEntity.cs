@@ -28,14 +28,13 @@ namespace Entities.WalletEntities
             get { return id; }
             set { id = value; }
         }
-        public DataEntity() : this(Core.GenerateId())
-        {
-            textInfo = null;
-        }
+        public DataEntity() : this(-1)
+        {  }
 
         public DataEntity(int id)
         {
             this.id = id;
+            textInfo = null;
         }
     }
 }

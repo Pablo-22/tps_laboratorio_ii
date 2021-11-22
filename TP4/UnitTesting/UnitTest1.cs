@@ -14,7 +14,7 @@ namespace UnitTesting
         {
             Person newPerson = new Person("Soy un Unit Testing personificado");
             Xml<Person> xml = new Xml<Person>();
-            string path = PathsGenerator.xmlGeneratePath(newPerson.Id.ToString());
+            string path = PathsGenerator.xmlGeneratePath("XmlSerializationUnitTest");
 
             Person destinationPerson = new Person();
 
@@ -30,7 +30,7 @@ namespace UnitTesting
             Person newPerson = new Person();
             newPerson.TextInfo = "Soy un Unit Testing personificado";
             Txt<Person> txt = new Txt<Person>();
-            string path = PathsGenerator.txtGeneratePath(newPerson.Id.ToString());
+            string path = PathsGenerator.txtGeneratePath("TextSerializationUnitTest");
 
             Person destinationPerson = new Person();
 

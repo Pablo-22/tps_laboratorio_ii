@@ -26,7 +26,7 @@ namespace Entities.InputOutput
                     Directory.CreateDirectory(path);
                 }
 
-                Path.Combine(path + fileName);
+                path = Path.Combine(path + fileName);
 
                 if (path != null)
                 {

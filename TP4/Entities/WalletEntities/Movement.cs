@@ -56,7 +56,15 @@ namespace Entities.WalletEntities
             this.purchaseDate = purchaseDate;
             this.type = isExpense;
             this.category = category;
+        }
 
+        public Movement(int id, float amount, int idWallet, DateTime purchaseDate, eType isExpense, string category) : base(id)
+        {
+            this.amount = amount;
+            this.idWallet = idWallet;
+            this.purchaseDate = purchaseDate;
+            this.type = isExpense;
+            this.category = category;
         }
 
         public Movement(float amount, int idWallet, eType type) : this(amount, idWallet, DateTime.Now, type, "Varios")
@@ -75,8 +83,9 @@ namespace Entities.WalletEntities
         public override string ToString()
         {
             StringBuilder movementInfo = new StringBuilder();
-            movementInfo.Append(this.Id + " - ");
-            movementInfo.Append(this.Amount + " - ");
+            movementInfo.Append(this.PurchaseDate + " - ");
+            movementInfo.Append("$" + this.Amount + " - ");
+            movementInfo.Append("Categoría: " + this.Category + " - ");
             movementInfo.Append("Wallet ID: " + this.idWallet);
 
             return movementInfo.ToString();

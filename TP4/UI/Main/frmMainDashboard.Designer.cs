@@ -42,6 +42,8 @@ namespace UI
             this.btnShowMovements = new System.Windows.Forms.Button();
             this.btnShowStats = new System.Windows.Forms.Button();
             this.btnLogInLogOut = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUserName
@@ -119,9 +121,9 @@ namespace UI
             // 
             this.lblNumActualBalance.BackColor = System.Drawing.Color.White;
             this.lblNumActualBalance.Font = new System.Drawing.Font("Yu Gothic UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNumActualBalance.Location = new System.Drawing.Point(311, 111);
+            this.lblNumActualBalance.Location = new System.Drawing.Point(313, 111);
             this.lblNumActualBalance.Name = "lblNumActualBalance";
-            this.lblNumActualBalance.Size = new System.Drawing.Size(328, 50);
+            this.lblNumActualBalance.Size = new System.Drawing.Size(321, 50);
             this.lblNumActualBalance.TabIndex = 9;
             this.lblNumActualBalance.Text = "$00,000.00";
             this.lblNumActualBalance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -130,9 +132,9 @@ namespace UI
             // 
             this.lblNumTotalIncomes.BackColor = System.Drawing.Color.White;
             this.lblNumTotalIncomes.Font = new System.Drawing.Font("Yu Gothic UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNumTotalIncomes.Location = new System.Drawing.Point(645, 111);
+            this.lblNumTotalIncomes.Location = new System.Drawing.Point(647, 111);
             this.lblNumTotalIncomes.Name = "lblNumTotalIncomes";
-            this.lblNumTotalIncomes.Size = new System.Drawing.Size(331, 50);
+            this.lblNumTotalIncomes.Size = new System.Drawing.Size(322, 50);
             this.lblNumTotalIncomes.TabIndex = 10;
             this.lblNumTotalIncomes.Text = "$00,000.00";
             this.lblNumTotalIncomes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,9 +143,9 @@ namespace UI
             // 
             this.lblNumTotalExpenses.BackColor = System.Drawing.Color.White;
             this.lblNumTotalExpenses.Font = new System.Drawing.Font("Yu Gothic UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNumTotalExpenses.Location = new System.Drawing.Point(982, 111);
+            this.lblNumTotalExpenses.Location = new System.Drawing.Point(980, 111);
             this.lblNumTotalExpenses.Name = "lblNumTotalExpenses";
-            this.lblNumTotalExpenses.Size = new System.Drawing.Size(330, 50);
+            this.lblNumTotalExpenses.Size = new System.Drawing.Size(325, 50);
             this.lblNumTotalExpenses.TabIndex = 11;
             this.lblNumTotalExpenses.Text = "$00,000.00";
             this.lblNumTotalExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,6 +156,7 @@ namespace UI
             this.pnlFormsContainer.Name = "pnlFormsContainer";
             this.pnlFormsContainer.Size = new System.Drawing.Size(1001, 487);
             this.pnlFormsContainer.TabIndex = 12;
+            this.pnlFormsContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFormsContainer_Paint);
             // 
             // btnShowMovements
             // 
@@ -181,7 +184,7 @@ namespace UI
             this.btnShowStats.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnShowStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowStats.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnShowStats.Location = new System.Drawing.Point(20, 325);
+            this.btnShowStats.Location = new System.Drawing.Point(20, 317);
             this.btnShowStats.Name = "btnShowStats";
             this.btnShowStats.Size = new System.Drawing.Size(251, 37);
             this.btnShowStats.TabIndex = 14;
@@ -206,6 +209,40 @@ namespace UI
             this.btnLogInLogOut.UseVisualStyleBackColor = true;
             this.btnLogInLogOut.Click += new System.EventHandler(this.btnLogInLogOut_Click);
             // 
+            // btnSave
+            // 
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.Location = new System.Drawing.Point(20, 370);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(251, 37);
+            this.btnSave.TabIndex = 16;
+            this.btnSave.Text = "Guardar              ";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnExport
+            // 
+            this.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnExport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnExport.Location = new System.Drawing.Point(20, 423);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(251, 37);
+            this.btnExport.TabIndex = 17;
+            this.btnExport.Text = "Exportar             ";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // frmMainDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -213,7 +250,9 @@ namespace UI
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::UI.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1360, 768);
+            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnLogInLogOut);
             this.Controls.Add(this.btnShowStats);
             this.Controls.Add(this.btnShowMovements);
@@ -253,5 +292,7 @@ namespace UI
         private System.Windows.Forms.Button btnShowMovements;
         private System.Windows.Forms.Button btnShowStats;
         private System.Windows.Forms.Button btnLogInLogOut;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnExport;
     }
 }

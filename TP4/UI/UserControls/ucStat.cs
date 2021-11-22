@@ -19,12 +19,17 @@ namespace UI
         public ucStat()
         {
             InitializeComponent();
+            lblAmount.Text = "Cargando...";
+            lblPercentage.Text = "Cargando...";
+            lblThanPreviousMonth.Text = "Cargando...";
+            lblCategory.Text = "Cargando...";
         }
 
-        public ucStat(string category, float monthTotal, float percentage, bool nowIsMore, bool initialValueIsNull) : this()
+        public ucStat(string category, float monthTotal, float previousMonthAmount, float percentage, bool nowIsMore, bool initialValueIsNull) : this()
         {
             lblCategory.Text = category;
             lblAmount.Text = monthTotal.ToString("$##,##,##,##0.00");
+            lblPreviousMonthAmount.Text = previousMonthAmount.ToString("$##,##,##,##0.00");
             lblPercentage.Text = percentage.ToString("0.00");
             if (initialValueIsNull)
             {
@@ -37,15 +42,25 @@ namespace UI
 
             if (nowIsMore)
             {
-                lblThanPreviousWeek.Text = "más que el mes pasado";
+                lblThanPreviousMonth.Text = "más que el mes pasado";
             }
             else
             {
-                lblThanPreviousWeek.Text = "menos que el mes pasado";
+                lblThanPreviousMonth.Text = "menos que el mes pasado";
             }
         }
 
         private void lblAmount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucStat_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCategory_Click(object sender, EventArgs e)
         {
 
         }

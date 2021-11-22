@@ -11,35 +11,61 @@ namespace ConsoleTests
     {
         static void Main(string[] args)
         {
-            /*
-            TextFile test = new TextFile("mi nombre es Pablo");
-            Txt file = new Txt();
-
-            file.Export(test);
-            */
-
-            //User test = new User();
-
-            //file.Import(@"textFiles\0.txt",out test);
-
-            //Xml<User> xmlFile = new Xml<User>();
-
-            //xmlFile.Export(test);
-
-            //xmlFile.Import(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\TextFilesInformation\2.xml"), ref test);
 
             Core.GetProjectConfig();
+            string userName = "Pablo";
+            string password = "12345";
 
-            //DbService.getUsers();
-            //Wallet wallet = DbService.GetWalletById(1);
-            //wallet.MoneyMovements = DbService.GetMovements(wallet.Id);
+            try
+            {
+                User user = DbService.GetUserByCredentials(userName, password);
+                if (user.Name == userName && user.Password == password)
+                {
+                    Wallet wallet = DbService.GetWalletById(user.IdWallet);
+                    if (wallet.Id != -1)
+                    {
+                        wallet.MoneyMovements = DbService.GetMovements(wallet.Id);
 
-            User user = DbService.GetUserByCredentials("gjhgfh", "54354rtfd");
+                        Console.WriteLine("Usuario: " + user.Name);
+                        Console.WriteLine("*********** Balance *********** ");
+                        Console.WriteLine("*********** $" + wallet.Balance + " *********** \n");
+                        Console.WriteLine("*********** Movimientos *********** ");
 
+                        wallet.MoneyMovements.ForEach(movement =>
+                        {
+                            Console.WriteLine(movement.ToString() + "\n");
+                        });
 
-            Console.WriteLine("fin");
-            //DbService.getMovements(5);
-        
+                        Console.WriteLine("\n**** INFORMES **** \n");
+
+                        float monthTotal = 0;
+                        float previousMonthTotal = 0;
+                        float percentage = 0;
+                        bool nowIsMore;
+                        bool initialValueIsNull;
+
+                        Bank.ExpensesCategories.ForEach(category =>
+                        {
+                            monthTotal = wallet.getMonthTotal(DateTime.Now, Movement.eType.Gasto, category);
+                            percentage = wallet.CompareNowWithPreviousMonth(Movement.eType.Gasto, category, out nowIsMore, out initialValueIsNull);
+                            previousMonthTotal = wallet.getMonthTotal(DateTime.Now.AddMonths(-1), Movement.eType.Gasto, category);
+                            Console.WriteLine("CATEGORÍA: " + category + " || TOTAL DEL MES: " + monthTotal + " || MES ANTERIOR: " + previousMonthTotal);
+                        });
+                    }
+                    else
+                    {
+                        Console.WriteLine("El usuario no tiene una wallet válida");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Credenciales incorrectas.");
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Ha habido un error al conectarse a la base de datos.");
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using Entities.WalletEntities;
 using Entities.SystemCore;
 using Entities.InputOutput;
-
+using System.Threading;
 
 namespace UI
 {
@@ -31,8 +31,9 @@ namespace UI
             this.movements = movements;
         }
 
-        private void loadHeaderValues()
+        public void LoadHeaderValues()
         {
+
             lblMonthName.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Now.Month);
             bool nowIsMore;
             bool initialValueIsNull;
@@ -77,43 +78,107 @@ namespace UI
             }
         }
 
-        private void loadStats()
+        public Task LoadCategoriesStats()
         {
-            pnlStats.Controls.Clear();
-            int index = 0;
-            int x = 0;
-            int y = 0;
-            float monthTotal = 0;
-            float percentage = 0;
-            bool nowIsMore;
-            bool initialValueIsNull;
-
-            Bank.ExpensesCategories.ForEach(category =>
+            return Task.Run(() =>
             {
-                monthTotal = Core.UserWallet.getMonthTotal(DateTime.Now, Movement.eType.Gasto, category);
-                percentage = Core.UserWallet.CompareNowWithPreviousMonth(Movement.eType.Gasto, category, out nowIsMore, out initialValueIsNull);
+                int index = 0;
+                int x = 0;
+                int y = 0;
+                float monthTotal = 0;
+                float previousMonthTotal = 0;
+                float percentage = 0;
+                bool nowIsMore;
+                bool initialValueIsNull;
 
-                pnlStats.Controls.Add(new ucStat(category, monthTotal, percentage, nowIsMore, initialValueIsNull));
-                pnlStats.Controls[index].Location = new Point(x, y);
-                y += 120;
-                index++;
+                Thread.Sleep(5000);
+                if (pnlStats.InvokeRequired)
+                {
+                    pnlStats.BeginInvoke((MethodInvoker)delegate()
+                    {
+                        pnlStats.Controls.Clear();
+                        Bank.ExpensesCategories.ForEach(category =>
+                        {
+                            monthTotal = Core.UserWallet.getMonthTotal(DateTime.Now, Movement.eType.Gasto, category);
+                            percentage = Core.UserWallet.CompareNowWithPreviousMonth(Movement.eType.Gasto, category, out nowIsMore, out initialValueIsNull);
+                            previousMonthTotal = Core.UserWallet.getMonthTotal(DateTime.Now.AddMonths(-1), Movement.eType.Gasto, category);
+                            pnlStats.Controls.Add(new ucStat(category, monthTotal, previousMonthTotal, percentage, nowIsMore, initialValueIsNull));
+                            pnlStats.Controls[index].Location = new Point(x, y);
+                            y += 135;
+                            index++;
+                        });
+                    });
+                }
             });
         }
 
-        private void onNewMovement(object sender, EventArgs e)
+        public Task ResetDefaultText()
         {
-            loadHeaderValues();
-            loadStats();
+            return Task.Run(() =>
+            {
+                int index = 0;
+                int x = 0;
+                int y = 0;
+
+                if (lblIncomesPercentage.InvokeRequired)
+                {
+                    lblIncomesPercentage.BeginInvoke((MethodInvoker)delegate ()
+                    {
+                        lblIncomesPercentage.Text = "Cargando...";
+                    });
+                }
+
+                if (lblMonthName.InvokeRequired)
+                {
+                    lblMonthName.BeginInvoke((MethodInvoker)delegate ()
+                    {
+                        lblMonthName.Text = "Cargando...";
+                    });
+                }
+
+                if (lblExpensesPercentage.InvokeRequired)
+                {
+                    lblExpensesPercentage.BeginInvoke((MethodInvoker)delegate ()
+                    {
+                        lblExpensesPercentage.Text = "Cargando...";
+                    });
+                }
+
+
+                if (pnlStats.InvokeRequired)
+                {
+                    pnlStats.BeginInvoke((MethodInvoker)delegate ()
+                    {
+                        pnlStats.Controls.Clear();
+                        Bank.ExpensesCategories.ForEach(category =>
+                        {
+                            pnlStats.Controls.Add(new ucStat());
+                            pnlStats.Controls[index].Location = new Point(x, y);
+                            y += 135;
+                            index++;
+                        });
+                    });
+                }
+
+            });
         }
+
+        private void OnNewMovement(object sender, EventArgs e)
+        {
+            LoadStats();
+        }
+
+        public async void LoadStats()
+        {
+            await LoadCategoriesStats();
+            LoadHeaderValues();
+        }
+
 
         private void frmStats_Load(object sender, EventArgs e)
         {
-            movements.newMovement += onNewMovement;
-
-            loadHeaderValues();
-            loadStats();
-
-            
+            movements.newMovement += OnNewMovement;
+            LoadStats();
         }
     }
 }

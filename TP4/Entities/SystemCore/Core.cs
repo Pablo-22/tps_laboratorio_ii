@@ -13,10 +13,10 @@ namespace Entities.SystemCore
 {
     public static class Core
     {
-        private static int lastId;
         private static Wallet userWallet;
         private static User actualUser;
         private static ProjectConfigurationData configData;
+
 
         public static ProjectConfigurationData ConfigData
         {
@@ -38,56 +38,9 @@ namespace Entities.SystemCore
             set { actualUser = value; }
         }
 
-
-
-        public static int LastId
-        {
-            get { return lastId; }
-            set { lastId = value; }
-        }
-
-
         static Core()
         {
             configData = new ProjectConfigurationData();
-        }
-
-        public static int GenerateId()
-        {
-            Core.LastId = Core.GetBiggestId();
-            Core.LastId++;
-            return Core.LastId;
-        }
-
-        public static int GetBiggestId()
-        {
-            int biggestId = Core.LastId;
-
-            foreach (User user in Bank.Users)
-            {
-                if (user.Id > Core.LastId)
-                {
-                    biggestId = user.Id;
-                }
-            }
-
-            foreach (Wallet wallet in Bank.Wallets)
-            {
-                if (wallet.Id > Core.LastId)
-                {
-                    biggestId = wallet.Id;
-                }
-
-                foreach (Movement movement in wallet.MoneyMovements)
-                {
-                    if (movement.Id > Core.LastId)
-                    {
-                        biggestId = movement.Id;
-                    }
-                }
-            }
-
-            return biggestId;
         }
 
 
@@ -165,13 +118,37 @@ namespace Entities.SystemCore
             Core.UserWallet = null;
 
             Core.ActualUser = DbService.GetUserByCredentials(name, password);
-            if (ActualUser != null)
+            if (ActualUser.IdWallet > -1)
             {
-                Core.UserWallet = DbService.GetWalletById(Core.ActualUser.Id);
-                if (UserWallet != null)
+                Core.UserWallet = DbService.GetWalletById(Core.ActualUser.IdWallet);
+                if (UserWallet.Id > -1)
                 {
                     Core.UserWallet.MoneyMovements = DbService.GetMovements(Core.UserWallet.Id);
                 }
+            }
+            else
+            {
+                throw new InvalidUserException();
+            }
+        }
+
+        /// <summary>
+        /// Comprueba que no exista un usuario con el mismo nombre recibido por parámetro,
+        /// y si no lo encuentra, lo crea y lo añade a la lista.
+        /// </summary>
+        /// <param name="nombreDeUsuario"></param>
+        /// <param name="password"></param>
+        public static void SignIn(string name, string password)
+        {
+            User newUser = DbService.GetUserByName(name);
+            if (newUser.IdWallet == -1 && newUser.Id == -1)
+            {
+
+                Wallet newWallet = new Wallet(0);
+                newUser = new User(name, password);
+                newUser.IdWallet = newWallet.Id;
+
+                DbService.UpdateUserWalletId(newUser);
             }
             else
             {

@@ -23,6 +23,8 @@ namespace UI
         public frmMovements movements;
         private bool statsIsActive;
         private bool movementsIsActive;
+        public event EventHandler logIn;
+        public event EventHandler logOut;
 
         public bool FrmMovementsIsActive
         {
@@ -56,14 +58,38 @@ namespace UI
             lblNumTotalIncomes.Text = Bank.GetTotalIncomesAmount().ToString("$##,##,##,##0.00");
         }
 
+        private void Clean()
+        {
+            lblNumActualBalance.Text = "$00,000.00";
+            lblUserName.Text = "Nombre";
+            lblNumWalletId.Text = "";
+            lblNumTotalExpenses.Text = "$00,000.00";
+            lblNumTotalIncomes.Text = "$00,000.00";
+        }
+
         private void onNewMovement(object sender, EventArgs e)
         {
             LoadUserData();
         }
 
+        private void onLogIn(object sender, EventArgs e)
+        {
+            stats.LoadStats();
+            movements.LoadWalletData();
+            this.LoadUserData();
+        }
+
+        private void onLogOut(object sender, EventArgs e)
+        {
+            this.IsLogged(false);
+            stats.ResetDefaultText();
+        }
+
         private void frmMainDashboard_Load(object sender, EventArgs e)
         {
             movements.newMovement += onNewMovement;
+            this.logIn += onLogIn;
+            this.logOut += onLogOut;
             this.IsLogged(false);
             Core.GetProjectConfig();
         }
@@ -110,34 +136,66 @@ namespace UI
                 DialogResult result = login.ShowDialog();
                 if (result == DialogResult.OK)
                 {
+                    this.logIn?.Invoke(this, EventArgs.Empty);
                     this.IsLogged(true);
-                    this.LoadUserData();
+                    
                 }
             }
             else
             {
                 Core.LogOut();
-                this.IsLogged(false);
+                this.logOut?.Invoke(this, EventArgs.Empty);
             }
         }
         private void IsLogged(bool isLogged)
         {
+            btnExport.Enabled = isLogged;
+            btnShowMovements.Enabled = isLogged;
+            btnShowStats.Enabled = isLogged;
+
             if (isLogged)
             {
-                btnShowMovements.Enabled = true;
-                btnShowStats.Enabled = true;
                 btnLogInLogOut.Text = "Cerrar sesión";
             }
             else
             {
-                btnShowMovements.Enabled = false;
-                btnShowStats.Enabled = false;
                 btnLogInLogOut.Text = "Iniciar sesión";
-                this.movements.Visible = false;
-                this.stats.Visible = false;
-                this.movementsIsActive = false;
-                this.statsIsActive = false;
+                this.stats.Visible = isLogged;
+                this.movementsIsActive = isLogged;
+                this.statsIsActive = isLogged;
+                this.movements.Visible = isLogged;
+                this.Clean();
             }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            DbService.SaveMovements(Core.UserWallet);
+            DbService.UpdateWalletBalance(Core.UserWallet);
+        }
+
+
+
+        private void pnlFormsContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            List<User> usersList = DbService.GetUsers();
+            List<Wallet> walletList = DbService.GetWallets();
+
+            walletList.ForEach(wallet =>
+            {
+                wallet.MoneyMovements = DbService.GetMovements(wallet.Id);
+            });
+
+            BankSnapshot bankSnapshot = new BankSnapshot(usersList, walletList);
+
+            Json<BankSnapshot> snapshotIO = new Json<BankSnapshot>();
+
+            snapshotIO.Export(PathsGenerator.JsonPath, bankSnapshot.Id.ToString() + ".json", bankSnapshot);
         }
     }
 }

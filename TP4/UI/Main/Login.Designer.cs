@@ -51,7 +51,7 @@ namespace UI
             this.btnAcceder.TabIndex = 2;
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.UseVisualStyleBackColor = false;
-            this.btnAcceder.Click += new System.EventHandler(this.button1_Click);
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // btnRegistrarse
             // 

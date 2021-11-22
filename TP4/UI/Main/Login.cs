@@ -27,7 +27,7 @@ namespace UI
             txtContrasenia.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAcceder_Click(object sender, EventArgs e)
         {
             if (txtNombreDeUsuario.Text != "" && txtContrasenia.Text != "")
             {
@@ -36,9 +36,13 @@ namespace UI
                     Core.LoguearUsuario(txtNombreDeUsuario.Text, txtContrasenia.Text);
                     this.DialogResult = DialogResult.OK;
                 }
-                catch
+                catch(InvalidUserException)
                 {
-                    lblMensajeDeError.Text = "*Usuario o contraseña incorrecto/s";
+                    lblMensajeDeError.Text = "* Usuario o contraseña incorrecto/s";
+                }
+                catch(Exception)
+                {
+                    lblMensajeDeError.Text = "* Ha habido un error";
                 }
             }
         }
@@ -58,24 +62,19 @@ namespace UI
         {
             if (string.IsNullOrEmpty(txtContrasenia.Text) == false && string.IsNullOrEmpty(txtNombreDeUsuario.Text) == false)
             {
-                /*if (Core.RegistrarUsuario(txtNombreDeUsuario.Text, txtContrasenia.Text) == true)
+                try
                 {
+                    Core.SignIn(txtNombreDeUsuario.Text, txtContrasenia.Text);
                     MessageBox.Show("Usuario registrado exitosamente.\nAhora ingrese sus credenciales para acceder.", "¡Genial!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
 
                 }
-                else
+                catch
                 {
                     MessageBox.Show("No se ha podido completar el registro. Es posible que haya ingresado datos inválidos " +
                         "o que ya exista un usuario con ese nombre.\nIntente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }*/
+                }
             }
-        }
-
-        private void btnAutocompletarEmpleado_Click(object sender, EventArgs e)
-        {
-            txtNombreDeUsuario.Text = "Ramiro";
-            txtContrasenia.Text = "pass999";
         }
     }
 }

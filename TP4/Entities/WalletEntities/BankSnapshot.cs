@@ -27,11 +27,10 @@ namespace Entities.WalletEntities
         }
 
 
-        public BankSnapshot(List<User> users, List<Wallet> wallets)
+        public BankSnapshot(List<User> users, List<Wallet> wallets) :base()
         {
             this.users = users;
             this.wallets = wallets;
-            this.Id = -1;
         }
     }
 }

@@ -19,12 +19,13 @@ namespace Entities.WalletEntities
             this.balance = 0;
         }
 
-        public Wallet(float balance) : this(0, new List<Movement>())
+        public Wallet(float balance) : this(balance, new List<Movement>())
         {
-            this.balance = balance;
+            DbService.InsertWallet(this);
+            this.Id = DbService.getBiggestIdWallet();
         }
 
-        public Wallet(float balance, List<Movement> moneyMovements) : base()
+        public Wallet(float balance, List<Movement> moneyMovements)
         {
             this.balance = balance;
             this.moneyMovements = moneyMovements;
@@ -34,11 +35,6 @@ namespace Entities.WalletEntities
         {
             this.balance = balance;
             this.moneyMovements = moneyMovements;
-        }
-
-        public Wallet(int id, float balance) : base(id)
-        {
-            this.balance = balance;
         }
 
         public float Balance

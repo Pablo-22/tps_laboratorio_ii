@@ -164,5 +164,14 @@ namespace UI
                 this.statsIsActive = false;
             }
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            BankSnapshot snapshot = new BankSnapshot(Bank.Users, Bank.Wallets);
+
+            Json<BankSnapshot> walletSnapshot = new Json<BankSnapshot>();
+
+            walletSnapshot.Export(PathsGenerator.JsonPath, snapshot.Id.ToString(), snapshot);
+        }
     }
 }

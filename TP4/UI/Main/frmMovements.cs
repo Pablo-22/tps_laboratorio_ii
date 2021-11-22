@@ -29,11 +29,10 @@ namespace UI
 
         private void frmMovements_Load(object sender, EventArgs e)
         {
-
             LoadWalletData();
         }
 
-        private void LoadWalletData()
+        public void LoadWalletData()
         {
             pnlMovements.Controls.Clear();
             int index = 0;
