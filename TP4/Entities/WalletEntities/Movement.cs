@@ -91,6 +91,12 @@ namespace Entities.WalletEntities
             return movementInfo.ToString();
         }
 
+        /// <summary>
+        /// Setea la categoría de un movimiento. Para setearla
+        /// debe existir en Bank.ExpensesCategories o Bank.IncomesCategories. Caso contrario retorna "Varios"
+        /// </summary>
+        /// <param name="category"></param>
+        /// <returns>La categoría deseada o "Varios" si no existe en Bank</returns>
         public string setCategory(string category)
         {
             string categoryToReturn = "Varios";

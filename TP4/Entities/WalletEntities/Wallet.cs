@@ -49,16 +49,26 @@ namespace Entities.WalletEntities
             set { moneyMovements = value; }
         }
 
-        public bool SaveNewMovement(float amount, DateTime movementDate, Movement.eType isExpense, string category)
+        /// <summary>
+        /// Recibe los datos de un movimiento y lo añade a la wallet.
+        /// Finalmente ordena los movimientos por fecha.
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <param name="movementDate"></param>
+        /// <param name="isExpense"></param>
+        /// <param name="category"></param>
+        public void SaveNewMovement(float amount, DateTime movementDate, Movement.eType isExpense, string category)
         {
             Movement newMovement = new Movement(amount,this.Id, movementDate, isExpense, category);
             this.MoneyMovements.Add(newMovement);
             setBalance(newMovement);
             this.SortMovementsByMoreRecentDate();
-
-            return true;
         }
 
+        /// <summary>
+        /// Recibe un movimiento y lo resta o lo suma al balance según corresponda.
+        /// </summary>
+        /// <param name="movement"></param>
         private void setBalance(Movement movement)
         {
             if (movement.Type == Movement.eType.Gasto)
@@ -74,14 +84,26 @@ namespace Entities.WalletEntities
             }
         }
 
+        /// <summary>
+        /// Ordena los movimientos por fecha. De más reciente a más antiguo.
+        /// </summary>
         public void SortMovementsByMoreRecentDate()
         {
             this.moneyMovements.Sort((movementA, movementB) => movementB.PurchaseDate.CompareTo(movementA.PurchaseDate));
         }
 
+        /// <summary>
+        /// Obtiene el monto total de movimientos de una categoría 
+        /// en específico en el mes pasado como parámetro.
+        /// Pueden ser gastos o ingresos, según el tipo pasado como parámetro.
+        /// </summary>
+        /// <param name="date"></param> Mes del que se quiere conocer el total
+        /// <param name="type"></param> Gasto o ingreso.
+        /// <param name="category"></param> Categoría específica a evaluar. Si es null, se considerarán todas las categorías.
+        /// <returns>Devuelve la suma del monto de todos los movimientos</returns>
         public float getMonthTotal(DateTime date, Movement.eType type, string category)
         {
-            float totalIncomes = 0;
+            float totalAmount = 0;
 
             this.moneyMovements.ForEach(movement =>
             {
@@ -91,27 +113,27 @@ namespace Entities.WalletEntities
                 {
                     if (string.IsNullOrEmpty(category) || movement.Category == category)
                     {
-                        totalIncomes += movement.Amount;
+                        totalAmount += movement.Amount;
                     }
                 }
             });
-            return totalIncomes;
+            return totalAmount;
         }
 
 
         /// <summary>
         /// Compara los gastos o ingresos de dos meses diferentes 
         /// y devuelve el porcentaje de diferencia
-        /// y un boolean que determina si el monto de la fecha 
-        /// actual fue mayor o menor al previo.
+        /// y un boolean que determina si el monto de la fecha más antigua
+        /// es 0
         /// </summary>
         /// 
         /// <param name="nowDate"></param> Fecha más nueva
         /// <param name="previousDate"></param> Fecha anterior a comparar
         /// <param name="type"></param> Gasto o Ingreso
-        /// <param name="nowIsMore"></param> True si el monto en actualDate es mayor a previousDate. Caso contrario False
+        /// <param name="initialValueIsNotNull"></param> True si el monto en previousData no es 0. Caso contrario False
         /// <returns>Porcentaje de diferencia entre una fecha y otra.</returns>
-        public float CompareDatesAmount(DateTime nowDate, DateTime previousDate, Movement.eType type, string category, out bool initialValueIsNull)
+        public float CompareDatesAmount(DateTime nowDate, DateTime previousDate, Movement.eType type, string category, out bool initialValueIsNotNull)
         {
             float nowDateAmount = getMonthTotal(nowDate, type, category);
             float previousMonthAmount = getMonthTotal(previousDate, type, category);
@@ -119,22 +141,30 @@ namespace Entities.WalletEntities
 
             if (previousMonthAmount > 0)
             {
-                initialValueIsNull = true;
+                initialValueIsNotNull = true;
                 percentage = (nowDateAmount - previousMonthAmount) / previousMonthAmount * 100;
             }
             else
             {
                 percentage = nowDateAmount;
-                initialValueIsNull = false;
+                initialValueIsNotNull = false;
             }
 
             return percentage;
         }
 
-        public float CompareNowWithPreviousMonth(Movement.eType type, string category, out bool nowIsMore, out bool initialValueIsNull)
+        /// <summary>
+        /// Compara el total del mes actual con el mes anterior, de la categoría pasada como parámetro.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="category"></param>
+        /// <param name="nowIsMore"></param> Indica si el valor actual supera al anterior (true)
+        /// <param name="initialValueIsNotNull"></param> Indica que el valor anterior no es 0
+        /// <returns></returns>
+        public float CompareNowWithPreviousMonth(Movement.eType type, string category, out bool nowIsMore, out bool initialValueIsNotNull)
         {
             nowIsMore = true;
-            float percentage = CompareDatesAmount(DateTime.Now, DateTime.Now.AddMonths(-1), type, category, out initialValueIsNull);
+            float percentage = CompareDatesAmount(DateTime.Now, DateTime.Now.AddMonths(-1), type, category, out initialValueIsNotNull);
             if (percentage < 0)
             {
                 nowIsMore = false;

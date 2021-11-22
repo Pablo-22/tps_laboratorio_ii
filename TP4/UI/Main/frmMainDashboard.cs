@@ -50,6 +50,9 @@ namespace UI
             this.stats = new frmStats(this.movements);
         }
 
+        /// <summary>
+        /// Carga en el formulario principal los datos del usuario logueado.
+        /// </summary>
         private void LoadUserData()
         {
             lblNumActualBalance.Text = Core.UserWallet.Balance.ToString("$##,##,##,##0.00");
@@ -59,6 +62,9 @@ namespace UI
             lblNumTotalIncomes.Text = Bank.GetTotalIncomesAmount().ToString("$##,##,##,##0.00");
         }
 
+        /// <summary>
+        /// Limpia el formulario.
+        /// </summary>
         private void Clean()
         {
             lblNumActualBalance.Text = "$00,000.00";
@@ -130,6 +136,11 @@ namespace UI
                 stats.BringToFront();
         }
 
+        /// <summary>
+        /// Inicia o cierra sesión según el estado del botón.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogInLogOut_Click(object sender, EventArgs e)
         {
             if (btnLogInLogOut.Text == "Iniciar sesión")
@@ -149,6 +160,11 @@ namespace UI
                 this.logOut?.Invoke(this, EventArgs.Empty);
             }
         }
+
+        /// <summary>
+        /// Setea el formulario para el status logueado o sin loguear
+        /// </summary>
+        /// <param name="isLogged"></param>
         private void IsLogged(bool isLogged)
         {
             btnExport.Enabled = isLogged;
@@ -184,6 +200,13 @@ namespace UI
 
         }
 
+        /// <summary>
+        /// Exporta un snapshot del banco.
+        /// La idea era exportar datos del usuario logueado,
+        /// pero no alcancé con el tiempo.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExport_Click(object sender, EventArgs e)
         {
             Bank.Users = DbService.GetUsers();

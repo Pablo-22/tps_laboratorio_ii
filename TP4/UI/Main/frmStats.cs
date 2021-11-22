@@ -31,6 +31,10 @@ namespace UI
             this.movements = movements;
         }
 
+        /// <summary>
+        /// Carga los informes generales sobre los gastos 
+        /// e ingresos de la wallet del usuario logueado
+        /// </summary>
         public void LoadHeaderValues()
         {
 
@@ -81,6 +85,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Carga los informes de gastos según categorías de la wallet del usuario logueado
+        /// utiliza task. Genera un delay de 5 segundos para simular tiempo de procesamiento.
+        /// </summary>
+        /// <returns></returns>
         public Task LoadCategoriesStats()
         {
             return Task.Run(() =>
@@ -120,6 +129,10 @@ namespace UI
             });
         }
 
+        /// <summary>
+        /// Resetea los labels del formulario.
+        /// </summary>
+        /// <returns></returns>
         public Task ResetDefaultText()
         {
             return Task.Run(() =>
@@ -176,6 +189,10 @@ namespace UI
             LoadStats();
         }
 
+        /// <summary>
+        /// Carga primero los informes de las categorías
+        /// y luego los generales.
+        /// </summary>
         public async void LoadStats()
         {
             await LoadCategoriesStats();

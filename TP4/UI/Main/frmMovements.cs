@@ -32,6 +32,9 @@ namespace UI
             LoadWalletData();
         }
 
+        /// <summary>
+        /// Carga los movimientos de la wallet del usuario logueado.
+        /// </summary>
         public void LoadWalletData()
         {
             pnlMovements.Controls.Clear();
@@ -49,6 +52,12 @@ namespace UI
             });
         }
 
+        /// <summary>
+        /// Abre el formulario para añadir movimientos, y si devuelve
+        /// OK, refresca el formulario e invoca a un evento newMovement.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAddMovement_Click(object sender, EventArgs e)
         {
             frmNewExpenseDialog newExpense = new frmNewExpenseDialog();

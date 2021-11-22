@@ -27,17 +27,39 @@ namespace Entities.InputOutput
         }
 
 
+        /// <summary>
+        /// Genera un path para archivos de texto combinando el 
+        /// path por defecto seleccionado para los archivos de texto
+        /// y el nombre pasado por parámetro más la extensión .txt
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns>Path creado</returns>
         public static string txtGeneratePath(string fileName)
         {
             string finalFileName = PathsGenerator.TxtPath + fileName + ".txt";
             return fileName;
         }
 
+        /// <summary>
+        /// Genera un path para archivos xml combinando el 
+        /// path por defecto seleccionado para los archivos de texto
+        /// y el nombre pasado por parámetro más la extensión .xml
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns>Path creado</returns>
         public static string xmlGeneratePath(string fileName)
         {
             string finalFileName = PathsGenerator.XmlPath + fileName + ".xml";
             return finalFileName;
         }
+
+        /// <summary>
+        /// Genera un path para archivos json combinando el 
+        /// path por defecto seleccionado para los archivos de texto
+        /// y el nombre pasado por parámetro más la extensión .json
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns>Path creado</returns>
         public static string jsonGeneratePath(string fileName)
         {
             string finalFileName = PathsGenerator.JsonPath + fileName + ".json";

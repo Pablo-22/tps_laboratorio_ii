@@ -17,6 +17,11 @@ namespace Entities.DataBaseActions
         static DbService()
         { }
 
+
+        /// <summary>
+        /// Testea la conexión con la base de datos.
+        /// Si no puede conectarse, lanzará una excepción a controlar.
+        /// </summary>
         public static void TestConnection()
         {
             SqlConnection connection = new SqlConnection();
@@ -31,6 +36,11 @@ namespace Entities.DataBaseActions
             }
         }
 
+        /// <summary>
+        /// Crea un nuevo command con la conexión pasada por parámetro.
+        /// </summary>
+        /// <param name="connection"></param>
+        /// <returns></returns>
         public static SqlCommand newCommand(SqlConnection connection)
         {
             SqlCommand command = new SqlCommand();
@@ -40,6 +50,10 @@ namespace Entities.DataBaseActions
         }
 
 
+        /// <summary>
+        /// Obtiene todos los usuarios y los retorna en una lista.
+        /// </summary>
+        /// <returns></returns>
         public static List<User> GetUsers()
         {
             SqlConnection connection = new SqlConnection();
@@ -83,6 +97,13 @@ namespace Entities.DataBaseActions
             }
         }
 
+
+        /// <summary>
+        /// Obtiene un usuario por sus credenciales.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="password"></param>
+        /// <returns>User</returns>
         public static User GetUserByCredentials(string name, string password)
         {
             SqlConnection connection = new SqlConnection();
@@ -123,6 +144,11 @@ namespace Entities.DataBaseActions
             }
         }
 
+        /// <summary>
+        /// Obtiene un usuario por su nombre
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns>User</returns>
         public static User GetUserByName(string name)
         {
             SqlConnection connection = new SqlConnection();
@@ -162,6 +188,10 @@ namespace Entities.DataBaseActions
             }
         }
 
+        /// <summary>
+        /// Obtiene un usuario mediante su ID
+        /// </summary>
+        /// <param name="id"></param>
         public static User GetUserById(int id)
         {
             SqlConnection connection = new SqlConnection();
@@ -203,6 +233,10 @@ namespace Entities.DataBaseActions
         }
 
 
+        /// <summary>
+        /// Obtiene una wallet mediante su ID
+        /// </summary>
+        /// <param name="id"></param>
         public static Wallet GetWalletById(int id)
         {
             SqlConnection connection = new SqlConnection();
@@ -240,7 +274,9 @@ namespace Entities.DataBaseActions
             }
         }
 
-
+        /// <summary>
+        /// Obtiene todas las wallets y las devuelve en una lista
+        /// </summary>
         public static List<Wallet> GetWallets()
         {
             SqlConnection connection = new SqlConnection();
@@ -282,6 +318,10 @@ namespace Entities.DataBaseActions
         }
 
 
+        /// <summary>
+        /// Obtiene todos los movimientos de la wallet con el id pasado por parámetro
+        /// </summary>
+        /// <param name="idWallet"></param>
         public static List<Movement> GetMovements(int idWallet)
         {
             SqlConnection connection = new SqlConnection();
@@ -328,6 +368,10 @@ namespace Entities.DataBaseActions
             }
         }
 
+        /// <summary>
+        /// Obtiene un movimiento por su id y lo retorna
+        /// </summary>
+        /// <param name="idMovement"></param>
         public static Movement GetMovement(int idMovement)
         {
             SqlConnection connection = new SqlConnection();
@@ -371,12 +415,20 @@ namespace Entities.DataBaseActions
             }
         }
 
+        /// <summary>
+        /// Actualiza los movimientos del usuario logueado.
+        /// </summary>
         public static void RefreshMovements()
         {
             Core.UserWallet.MoneyMovements = GetMovements(Core.UserWallet.Id);
         }
 
 
+        /// <summary>
+        /// Inserta un movimiento a la base de datos
+        /// </summary>
+        /// <param name="movement"></param>
+        /// <returns>True si funciona correctamente, false si hay error</returns>
         public static bool InsertMovement(Movement movement)
         {
             SqlConnection connection = new SqlConnection();
@@ -428,6 +480,11 @@ namespace Entities.DataBaseActions
 
         }
 
+        /// <summary>
+        /// Itera todos los movimientos de una wallet sobre la base de datos.
+        /// Si no existen, los añade.
+        /// </summary>
+        /// <param name="wallet"></param>
         public static void SaveMovements(Wallet wallet)
         {
             wallet.MoneyMovements.ForEach(movement =>
@@ -439,6 +496,9 @@ namespace Entities.DataBaseActions
             });
         }
 
+        /// <summary>
+        /// Obtiene el mayor id de la tabla movimientos.
+        /// </summary>
         public static int getBiggestIdMovement()
         {
             SqlConnection connection = new SqlConnection();
@@ -472,6 +532,10 @@ namespace Entities.DataBaseActions
             }
         }
 
+        /// <summary>
+        /// Obtiene el mayor id de la tabla de wallets
+        /// </summary>
+        /// <returns></returns>
         public static int getBiggestIdWallet()
         {
             SqlConnection connection = new SqlConnection();
@@ -505,6 +569,10 @@ namespace Entities.DataBaseActions
             }
         }
 
+        /// <summary>
+        /// Obtiene el mayor id de la tabla de usuarios
+        /// </summary>
+        /// <returns></returns>
         public static int getBiggestIdUser()
         {
             SqlConnection connection = new SqlConnection();
@@ -537,6 +605,12 @@ namespace Entities.DataBaseActions
                 connection.Close();
             }
         }
+
+        /// <summary>
+        /// Actualiza el balance de una wallet en la base de datos.
+        /// </summary>
+        /// <param name="wallet"></param>
+        /// <returns></returns>
         public static bool UpdateWalletBalance(Wallet wallet)
         {
             SqlConnection connection = new SqlConnection();
@@ -571,6 +645,11 @@ namespace Entities.DataBaseActions
             }
         }
 
+        /// <summary>
+        /// Actualiza el id de la wallet de un usuario en la base de datos.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public static bool UpdateUserWalletId(User user)
         {
             SqlConnection connection = new SqlConnection();
@@ -605,6 +684,11 @@ namespace Entities.DataBaseActions
             }
         }
 
+        /// <summary>
+        /// Inserta un usuario a la base de datos.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public static bool InsertUser(User user)
         {
             SqlConnection connection = new SqlConnection();
@@ -655,6 +739,11 @@ namespace Entities.DataBaseActions
             }
         }
 
+        /// <summary>
+        /// Inserta una wallet a la base de datos.
+        /// </summary>
+        /// <param name="wallet"></param>
+        /// <returns></returns>
         public static bool InsertWallet(Wallet wallet)
         {
             SqlConnection connection = new SqlConnection();
