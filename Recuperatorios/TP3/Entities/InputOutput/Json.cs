@@ -26,19 +26,19 @@ namespace Entities.InputOutput
                     Directory.CreateDirectory(path);
                 }
 
-                Path.Combine(path + fileName);
+                string fullPath = Path.Combine(path, fileName);
 
-                if (path != null)
+                if (fullPath != null)
                 {
                     JsonSerializerOptions options = new JsonSerializerOptions();
                     options.WriteIndented = true;
                     string serializedEntity = JsonSerializer.Serialize<T>(entity, options);
-                    File.WriteAllText(path, serializedEntity);
+                    File.WriteAllText(fullPath, serializedEntity);
                 }
             }
-            catch
+            catch(Exception e)
             {
-                throw new Exception($"Error al exportar la entidad.");
+                throw new Exception($"Error al exportar la entidad.", e);
             }
         }
 
@@ -46,7 +46,7 @@ namespace Entities.InputOutput
         {
             try
             {
-                if (File.Exists(Path.Combine(path + fileName)) )
+                if (File.Exists(Path.Combine(path, fileName)) )
                 {
                     string dataCollected = File.ReadAllText(Path.Combine(path + fileName));
                     if (!string.IsNullOrEmpty(dataCollected))

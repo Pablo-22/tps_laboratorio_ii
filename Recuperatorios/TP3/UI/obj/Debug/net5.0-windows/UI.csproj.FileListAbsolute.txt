@@ -80,8 +80,6 @@ C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperator
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UI\obj\Debug\net5.0-windows\UI.csproj.AssemblyReference.cache
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UI\obj\Debug\net5.0-windows\UI.frmBase.resources
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UI\obj\Debug\net5.0-windows\UI.frmDialogBase.resources
-C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UI\obj\Debug\net5.0-windows\UI.frmWalletBase.resources
-C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UI\obj\Debug\net5.0-windows\UI.frmWalletVisualize.resources
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UI\obj\Debug\net5.0-windows\UI.frmMainDashboard.resources
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UI\obj\Debug\net5.0-windows\UI.frmMovements.resources
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UI\obj\Debug\net5.0-windows\UI.frmNewExpenseDialog.resources

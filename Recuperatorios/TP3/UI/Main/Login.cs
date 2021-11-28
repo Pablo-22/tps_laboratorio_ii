@@ -58,7 +58,7 @@ namespace UI
         {
             if (string.IsNullOrEmpty(txtContrasenia.Text) == false && string.IsNullOrEmpty(txtNombreDeUsuario.Text) == false)
             {
-                /*if (Core.RegistrarUsuario(txtNombreDeUsuario.Text, txtContrasenia.Text) == true)
+                if (Core.RegistrarUsuario(txtNombreDeUsuario.Text, txtContrasenia.Text) == true)
                 {
                     MessageBox.Show("Usuario registrado exitosamente.\nAhora ingrese sus credenciales para acceder.", "¡Genial!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
@@ -68,14 +68,23 @@ namespace UI
                 {
                     MessageBox.Show("No se ha podido completar el registro. Es posible que haya ingresado datos inválidos " +
                         "o que ya exista un usuario con ese nombre.\nIntente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }*/
+                }
             }
         }
 
-        private void btnAutocompletarEmpleado_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            txtNombreDeUsuario.Text = "Ramiro";
-            txtContrasenia.Text = "pass999";
+            this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void btnExit_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnExit.ForeColor = Color.DarkRed;
+        }
+
+        private void btnExit_MouseLeave(object sender, EventArgs e)
+        {
+            btnExit.ForeColor = Color.Red;
         }
     }
 }

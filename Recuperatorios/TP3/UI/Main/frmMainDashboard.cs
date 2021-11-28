@@ -152,12 +152,14 @@ namespace UI
                 btnShowMovements.Enabled = true;
                 btnShowStats.Enabled = true;
                 btnLogInLogOut.Text = "Cerrar sesión";
+                btnSave.Enabled = true;
             }
             else
             {
                 btnShowMovements.Enabled = false;
                 btnShowStats.Enabled = false;
                 btnLogInLogOut.Text = "Iniciar sesión";
+                btnSave.Enabled = false;
                 this.movements.Visible = false;
                 this.stats.Visible = false;
                 this.movementsIsActive = false;
@@ -171,7 +173,7 @@ namespace UI
 
             Json<BankSnapshot> walletSnapshot = new Json<BankSnapshot>();
 
-            walletSnapshot.Export(PathsGenerator.JsonPath, snapshot.Id.ToString(), snapshot);
+            walletSnapshot.Export(PathsGenerator.JsonPath, snapshot.Id.ToString() + ".json", snapshot);
         }
 
         private void btnExit_MouseMove(object sender, MouseEventArgs e)

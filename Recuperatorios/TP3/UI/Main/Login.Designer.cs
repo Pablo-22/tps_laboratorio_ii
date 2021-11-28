@@ -38,6 +38,7 @@ namespace UI
             this.lblMensajeDeError = new System.Windows.Forms.Label();
             this.btnAutocomplete = new System.Windows.Forms.Button();
             this.lblBienvenido = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAcceder
@@ -136,12 +137,29 @@ namespace UI
             this.lblBienvenido.TabIndex = 8;
             this.lblBienvenido.Text = "Bienvenido";
             // 
+            // btnExit
+            // 
+            this.btnExit.AutoSize = true;
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnExit.ForeColor = System.Drawing.Color.Red;
+            this.btnExit.Location = new System.Drawing.Point(1321, 9);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(33, 21);
+            this.btnExit.TabIndex = 20;
+            this.btnExit.Text = "⚫";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
+            this.btnExit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnExit_MouseMove);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.btnAutocomplete);
             this.Controls.Add(this.lblMensajeDeError);
@@ -172,5 +190,6 @@ namespace UI
         private System.Windows.Forms.Label lblMensajeDeError;
         private System.Windows.Forms.Button btnAutocomplete;
         private System.Windows.Forms.Label lblBienvenido;
+        private System.Windows.Forms.Label btnExit;
     }
 }
