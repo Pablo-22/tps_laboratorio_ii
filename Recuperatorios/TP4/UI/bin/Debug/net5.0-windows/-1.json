@@ -1,0 +1,284 @@
+{
+  "Users": [
+    {
+      "IdWallet": 8,
+      "Name": "Pablo",
+      "Password": "12345",
+      "TextInfo": null,
+      "Id": 2
+    },
+    {
+      "IdWallet": 9,
+      "Name": "Juana",
+      "Password": "12345",
+      "TextInfo": null,
+      "Id": 3
+    },
+    {
+      "IdWallet": 10,
+      "Name": "Jose",
+      "Password": "12345",
+      "TextInfo": null,
+      "Id": 4
+    },
+    {
+      "IdWallet": 11,
+      "Name": "Pepe",
+      "Password": "12345",
+      "TextInfo": null,
+      "Id": 5
+    },
+    {
+      "IdWallet": 12,
+      "Name": "Ramiro",
+      "Password": "12345",
+      "TextInfo": null,
+      "Id": 6
+    },
+    {
+      "IdWallet": 13,
+      "Name": "Luciana",
+      "Password": "12345",
+      "TextInfo": null,
+      "Id": 7
+    }
+  ],
+  "Wallets": [
+    {
+      "Balance": 43459,
+      "MoneyMovements": [
+        {
+          "Amount": 565,
+          "PurchaseDate": "2021-11-07T20:11:58.0632587-03:00",
+          "IdWallet": 8,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 14
+        },
+        {
+          "Amount": 76,
+          "PurchaseDate": "2021-11-04T20:12:02",
+          "IdWallet": 8,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 15
+        },
+        {
+          "Amount": 800,
+          "PurchaseDate": "2021-11-07T20:13:40.9394614-03:00",
+          "IdWallet": 8,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 27
+        },
+        {
+          "Amount": 800,
+          "PurchaseDate": "2021-11-07T20:14:25.8955361-03:00",
+          "IdWallet": 8,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 29
+        },
+        {
+          "Amount": 100,
+          "PurchaseDate": "2021-11-07T22:22:30.1398706-03:00",
+          "IdWallet": 8,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 117
+        }
+      ],
+      "TextInfo": null,
+      "Id": 8
+    },
+    {
+      "Balance": 17286,
+      "MoneyMovements": [
+        {
+          "Amount": 4543,
+          "PurchaseDate": "2021-11-08T20:13:20",
+          "IdWallet": 9,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 24
+        },
+        {
+          "Amount": 55,
+          "PurchaseDate": "2021-11-07T20:13:29.0473426-03:00",
+          "IdWallet": 9,
+          "Type": 1,
+          "TextInfo": null,
+          "Id": 25
+        },
+        {
+          "Amount": 656,
+          "PurchaseDate": "2021-11-07T20:13:37.0036795-03:00",
+          "IdWallet": 9,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 26
+        },
+        {
+          "Amount": 10000,
+          "PurchaseDate": "2021-11-07T21:48:56.5733568-03:00",
+          "IdWallet": 9,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 42
+        }
+      ],
+      "TextInfo": null,
+      "Id": 9
+    },
+    {
+      "Balance": 36550,
+      "MoneyMovements": [
+        {
+          "Amount": 880,
+          "PurchaseDate": "2021-11-04T20:14:02",
+          "IdWallet": 10,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 28
+        },
+        {
+          "Amount": 10000,
+          "PurchaseDate": "2021-11-07T20:15:22.9116511-03:00",
+          "IdWallet": 10,
+          "Type": 1,
+          "TextInfo": null,
+          "Id": 31
+        },
+        {
+          "Amount": 412,
+          "PurchaseDate": "2021-11-07T22:43:17.2061907-03:00",
+          "IdWallet": 10,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 132
+        }
+      ],
+      "TextInfo": null,
+      "Id": 10
+    },
+    {
+      "Balance": 10155,
+      "MoneyMovements": [
+        {
+          "Amount": 765,
+          "PurchaseDate": "2021-11-07T20:12:10.7746818-03:00",
+          "IdWallet": 11,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 16
+        },
+        {
+          "Amount": 800,
+          "PurchaseDate": "2021-11-07T20:12:48.9630381-03:00",
+          "IdWallet": 11,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 21
+        },
+        {
+          "Amount": 34,
+          "PurchaseDate": "2021-11-07T22:22:49.212751-03:00",
+          "IdWallet": 11,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 129
+        },
+        {
+          "Amount": 600,
+          "PurchaseDate": "2021-11-08T22:22:55",
+          "IdWallet": 11,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 131
+        }
+      ],
+      "TextInfo": null,
+      "Id": 11
+    },
+    {
+      "Balance": 16997,
+      "MoneyMovements": [
+        {
+          "Amount": 655,
+          "PurchaseDate": "2021-11-08T20:12:15",
+          "IdWallet": 12,
+          "Type": 1,
+          "TextInfo": null,
+          "Id": 17
+        },
+        {
+          "Amount": 6765,
+          "PurchaseDate": "2021-11-04T20:12:37",
+          "IdWallet": 12,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 20
+        },
+        {
+          "Amount": 343,
+          "PurchaseDate": "2021-11-08T20:13:11",
+          "IdWallet": 12,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 23
+        }
+      ],
+      "TextInfo": null,
+      "Id": 12
+    },
+    {
+      "Balance": 17088,
+      "MoneyMovements": [
+        {
+          "Amount": 8878,
+          "PurchaseDate": "2021-11-07T20:12:24.133437-03:00",
+          "IdWallet": 13,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 18
+        },
+        {
+          "Amount": 696,
+          "PurchaseDate": "2021-11-08T20:12:29",
+          "IdWallet": 13,
+          "Type": 1,
+          "TextInfo": null,
+          "Id": 19
+        },
+        {
+          "Amount": 3240,
+          "PurchaseDate": "2021-11-07T20:12:58.777626-03:00",
+          "IdWallet": 13,
+          "Type": 1,
+          "TextInfo": null,
+          "Id": 22
+        },
+        {
+          "Amount": 200,
+          "PurchaseDate": "2021-11-07T22:22:35.3806809-03:00",
+          "IdWallet": 13,
+          "Type": 0,
+          "TextInfo": null,
+          "Id": 120
+        },
+        {
+          "Amount": 230,
+          "PurchaseDate": "2021-11-07T22:42:54.6131086-03:00",
+          "IdWallet": 13,
+          "Type": 1,
+          "TextInfo": null,
+          "Id": 121
+        }
+      ],
+      "TextInfo": null,
+      "Id": 13
+    }
+  ],
+  "TextInfo": null,
+  "Id": -1
+}
