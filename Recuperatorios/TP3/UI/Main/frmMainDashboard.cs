@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks; 
-using Entities.DataBaseActions;
 using System.Windows.Forms;
 using Entities.WalletEntities;
 using Entities.SystemCore;
@@ -51,6 +50,9 @@ namespace UI
             this.stats = new frmStats(this.movements);
         }
 
+        /// <summary>
+        /// Carga los datos del usuario en los labels del form
+        /// </summary>
         private void LoadUserData()
         {
             lblNumActualBalance.Text = Core.UserWallet.Balance.ToString("$##,##,##,##0.00");
@@ -78,6 +80,12 @@ namespace UI
             stats.ResetDefaultText();
         }
 
+        /// <summary>
+        /// Carga los eventos con los métodos correspondientes
+        /// Importa los usuarios y wallets del banco desde un archivo .json
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmMainDashboard_Load(object sender, EventArgs e)
         {
             movements.newMovement += onNewMovement;
@@ -112,16 +120,11 @@ namespace UI
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblShowMovements_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        /// <summary>
+        /// Muestra el formulario de movimientos en el panel del frmMainDashboard
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnShowMovements_Click(object sender, EventArgs e)
         {
             if (!this.FrmMovementsIsActive)
@@ -134,6 +137,11 @@ namespace UI
                 movements.BringToFront();
         }
 
+        /// <summary>
+        /// Muestra el formulario de estadísticas en el panel del frmMainDashboard.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnShowStats_Click(object sender, EventArgs e)
         {
             if (!this.FrmStatsIsActive)
@@ -146,6 +154,11 @@ namespace UI
                 stats.BringToFront();
         }
 
+        /// <summary>
+        /// Funciona como toggle button. Inicia sesión o cierra sesión. Invoca un evento diferente en cada caso.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogInLogOut_Click(object sender, EventArgs e)
         {
             if (btnLogInLogOut.Text == "Iniciar sesión")
@@ -166,6 +179,11 @@ namespace UI
                 this.logOut.Invoke(this, null);
             }
         }
+
+        /// <summary>
+        /// Modifica el estado de los controles, según el boolean recibido por parámetro.
+        /// </summary>
+        /// <param name="isLogged"></param>
         private void IsLogged(bool isLogged)
         {
             if (isLogged)
@@ -189,7 +207,11 @@ namespace UI
         }
 
         
-
+        /// <summary>
+        /// Exporta un archivo que representa un snapshot del banco.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
             BankSnapshot snapshot = new BankSnapshot(Bank.Users, Bank.Wallets);
@@ -198,6 +220,7 @@ namespace UI
 
             walletSnapshot.Export(PathsGenerator.JsonPath, snapshot.Id.ToString() + ".json", snapshot);
         }
+
 
         private void btnExit_MouseMove(object sender, MouseEventArgs e)
         {

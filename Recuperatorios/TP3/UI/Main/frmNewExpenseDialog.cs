@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks; 
-using Entities.DataBaseActions;
 using System.Windows.Forms;
 using Entities.WalletEntities;
 using Entities.SystemCore;
@@ -22,6 +21,9 @@ namespace UI
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Setea las categorías del banco en el combo box
+        /// </summary>
         private void setCategories()
         {
             cmbCategory.Items.Clear();
@@ -44,6 +46,9 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Setea los tipos de movimiento en el combo box.
+        /// </summary>
         private void setTypeComboBox()
         {
             var types = Enum.GetNames(typeof(Movement.eType)).Length;
@@ -56,6 +61,9 @@ namespace UI
             cmbType.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Carga los datos de la wallet del usuario en los labels.
+        /// </summary>
         private void loadWalletData()
         {
             float nextBalance = Core.UserWallet.Balance;

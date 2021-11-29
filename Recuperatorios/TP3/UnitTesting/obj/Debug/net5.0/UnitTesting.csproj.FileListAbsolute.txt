@@ -107,13 +107,13 @@ C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UnitTes
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UnitTesting\obj\Debug\net5.0\UnitTesting.pdb
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\TP3\UnitTesting\obj\Debug\net5.0\UnitTesting.genruntimeconfig.cache
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\CoverletSourceRootsMapping
-C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\testhost.exe
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\testhost.dll
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\testhost.exe
+C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\Microsoft.TestPlatform.AdapterUtilities.dll
-C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\UnitTesting.deps.json
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\UnitTesting.runtimeconfig.json
 C:\Users\PabloCordoba\Desktop\Developing\Repos TP\tps_laboratorio_ii\Recuperatorios\TP3\UnitTesting\bin\Debug\net5.0\UnitTesting.runtimeconfig.dev.json

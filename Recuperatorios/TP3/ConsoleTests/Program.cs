@@ -3,7 +3,6 @@ using System.IO;
 using Entities.InputOutput;
 using Entities.WalletEntities;
 using Entities.SystemCore;
-using Entities.DataBaseActions;
 using System.Text.Json;
 
 namespace ConsoleTests

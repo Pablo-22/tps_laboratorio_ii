@@ -7,7 +7,6 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks; 
-using Entities.DataBaseActions;
 using System.Windows.Forms;
 using Entities.WalletEntities;
 using Entities.SystemCore;
@@ -31,6 +30,9 @@ namespace UI
             this.movements = movements;
         }
 
+        /// <summary>
+        /// Carga los valores de los controles del header.
+        /// </summary>
         private void loadHeaderValues()
         {
             lblMonthName.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Now.Month);
@@ -77,7 +79,9 @@ namespace UI
             }
         }
 
-
+        /// <summary>
+        /// Carga los valores de los user controls con los porcentajes.
+        /// </summary>
         private void loadStats()
         {
             pnlStats.Controls.Clear();
@@ -145,8 +149,6 @@ namespace UI
 
             loadHeaderValues();
             loadStats();
-
-            
         }
     }
 }

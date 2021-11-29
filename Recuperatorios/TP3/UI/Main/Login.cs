@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks; 
-using Entities.DataBaseActions;
 using System.Windows.Forms;
 using Entities.WalletEntities;
 using Entities.SystemCore;
@@ -27,7 +26,12 @@ namespace UI
             txtContrasenia.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Inicia sesión.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAcceder_Click(object sender, EventArgs e)
         {
             if (txtNombreDeUsuario.Text != "" && txtContrasenia.Text != "")
             {
@@ -54,6 +58,11 @@ namespace UI
             
         }
 
+        /// <summary>
+        /// Registra a un usuario. Comprueba que el nombre de usuario no exista.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtContrasenia.Text) == false && string.IsNullOrEmpty(txtNombreDeUsuario.Text) == false)

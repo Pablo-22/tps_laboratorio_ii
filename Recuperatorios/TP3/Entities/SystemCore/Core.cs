@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks; 
-using Entities.DataBaseActions;
 using Entities.WalletEntities;
 using Entities.InputOutput;
 using System.Data.SqlClient;
@@ -52,6 +51,10 @@ namespace Entities.SystemCore
             configData = new ProjectConfigurationData();
         }
 
+        /// <summary>
+        /// Busca el mayor ID y le suma 1
+        /// </summary>
+        /// <returns>Retorna el id generado</returns>
         public static int GenerateId()
         {
             Core.LastId = Core.GetBiggestId();
@@ -59,6 +62,10 @@ namespace Entities.SystemCore
             return Core.LastId;
         }
 
+        /// <summary>
+        /// Busca el mayor id en toda la aplicación.
+        /// </summary>
+        /// <returns>Mayor ID encontrado.</returns>
         public static int GetBiggestId()
         {
             int biggestId = Core.LastId;
@@ -251,19 +258,11 @@ namespace Entities.SystemCore
         }
 
 
-
-        public static void GetProjectConfig()
-        {
-            ProjectConfigurationData config = new ProjectConfigurationData("testeando");
-
-            Json<ProjectConfigurationData> configDataSerializer = new Json<ProjectConfigurationData>();
-
-            configDataSerializer.Import("", "config.json", ref config);
-
-            Core.ConfigData = config;
-        }
-
-
+        /// <summary>
+        /// Genera una fecha aleatoria.
+        /// </summary>
+        /// <param name="gen"></param>
+        /// <returns>La fecha generada.</returns>
         public static DateTime RandomDay(Random gen)
         {
             DateTime start = new DateTime(2021, 10, 1);

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks; 
-using Entities.DataBaseActions;
 using Entities.SystemCore;
 using Entities.InputOutput;
 
@@ -93,6 +92,9 @@ namespace Entities.WalletEntities
             }
         }
 
+        /// <summary>
+        /// Setea las categorías para los movimientos de dinero.
+        /// </summary>
         private static void setCategories()
         {
             Bank.ExpensesCategories.Add("Varios");
@@ -112,6 +114,10 @@ namespace Entities.WalletEntities
         }
 
 
+        /// <summary>
+        /// Carga los datos del snapshot recibido por parámetro en los datos del banco.
+        /// </summary>
+        /// <param name="snapshot"></param>
         public static void LoadFromSnapshot(BankSnapshot snapshot)
         {
             Bank.Users = snapshot.Users;
@@ -119,6 +125,12 @@ namespace Entities.WalletEntities
         }
 
 
+        /// <summary>
+        /// Conecta el ID del usuario recibido con el ID de la wallet recibida
+        /// </summary>
+        /// <param name="idUser"></param>
+        /// <param name="idWallet"></param>
+        /// <returns>true si OK, false si alguno de los id no es válido.</returns>
         public static bool ConnectUserWithWallet(int idUser, int idWallet)
         {
             int userIndex = SearchUserIndexById(idUser);
@@ -131,7 +143,11 @@ namespace Entities.WalletEntities
             return false;
         }
 
-
+        /// <summary>
+        /// Busca en la lista de usuarios, el índice del usuario con el id recibido por parámetro.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Indice del usuario encontrado, o -1 si no existe.</returns>
         public static int SearchUserIndexById(int id)
         {
             int userIndex = -1;
@@ -145,6 +161,12 @@ namespace Entities.WalletEntities
             }
             return userIndex;
         }
+
+        /// <summary>
+        /// Busca en la lista de wallets, el índice de la wallet con el id recibido por parámetro.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Indice de la wallet encontrada, o -1 si no existe.</returns>
         public static int SearchWalletIndexById(int id)
         {
             int walletIndex = -1;
@@ -159,6 +181,11 @@ namespace Entities.WalletEntities
             return walletIndex;
         }
 
+        /// <summary>
+        /// Busca en la lista de usuarios, el índice del usuario con el walletId recibido por parámetro.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Indice del usuario encontrado, o -1 si no existe.</returns>
         public static int SearchUserIndexByWalletId(int id)
         {
             int userIndex = -1;
@@ -172,6 +199,11 @@ namespace Entities.WalletEntities
             return userIndex;
         }
 
+        /// <summary>
+        /// Busca la wallet del usuario con el id recibido por parámetro
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns> Indice de la wallet encontrada, o -1 si no existe.</returns>
         public static int SearchWalletIndexByUserId(int id)
         {
             Console.WriteLine(Bank.Users);
@@ -189,7 +221,10 @@ namespace Entities.WalletEntities
         
 
 
-
+        /// <summary>
+        /// Obtiene el total de ingresos del banco.
+        /// </summary>
+        /// <returns></returns>
         public static float GetTotalIncomesAmount()
         {
             float totalAmount = 0;
@@ -205,6 +240,10 @@ namespace Entities.WalletEntities
             return totalAmount;
         }
 
+        /// <summary>
+        /// Obtiene el total de gastos del banco.
+        /// </summary>
+        /// <returns></returns>
         public static float GetTotalExpensesAmount()
         {
             float totalAmount = 0;
@@ -220,6 +259,10 @@ namespace Entities.WalletEntities
             return totalAmount;
         }
 
+        /// <summary>
+        /// Obtiene la cantidad de movimientos del día de hoy
+        /// </summary>
+        /// <returns>La cantidad de movimientos el día de hoy.</returns>
         public static int GetTodayMovements()
         {
             int movementsCount = 0;
@@ -232,6 +275,10 @@ namespace Entities.WalletEntities
             return movementsCount;
         }
 
+        /// <summary>
+        /// Busca el movimiento con el mayor monto.
+        /// </summary>
+        /// <returns>El monto</returns>
         public static float GetBiggestMovementAmount()
         {
             float biggestMovement = 0;
@@ -249,6 +296,10 @@ namespace Entities.WalletEntities
             return biggestMovement;
         }
 
+        /// <summary>
+        /// Obtiene los usuarios con uno o más movimientos con el monto igual al mayor monto
+        /// </summary>
+        /// <returns>Lista con los usuarios que responden a la condición.</returns>
         public static List<User> GetUsersWithBiggestMovementAmount()
         {
             List<User> usersWithbiggestMovements = new List<User>();
@@ -267,6 +318,10 @@ namespace Entities.WalletEntities
             return usersWithbiggestMovements;
         }
 
+        /// <summary>
+        /// Obtiene la mayor cantidad de movimientos de un usuario del banco
+        /// </summary>
+        /// <returns>Cantidad de movimientos del usuario con más movimientos</returns>
         public static int GetLargestAmountOfMovements()
         {
             int largestAmountOfMovements = 0;
@@ -280,6 +335,10 @@ namespace Entities.WalletEntities
             return largestAmountOfMovements;
         }
 
+        /// <summary>
+        /// Busca a los usuarios con una cantidad de movimientos igual a la mayor cantidad de movimientos.
+        /// </summary>
+        /// <returns>Lista con los usuarios encontrados.</returns>
         public static List<User> GetUsersWithMoreMovements()
         {
             List<User> usersWithMoreMovements = new List<User>();
@@ -295,6 +354,10 @@ namespace Entities.WalletEntities
             return usersWithMoreMovements;
         }
 
+        /// <summary>
+        /// Obtiene el mayor monto de un ingreso.
+        /// </summary>
+        /// <returns>monto encontrado.</returns>
         public static float getBiggestIncomeAmount()
         {
             float biggestIncome = 0;

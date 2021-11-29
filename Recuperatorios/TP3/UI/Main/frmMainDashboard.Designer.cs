@@ -58,7 +58,6 @@ namespace UI
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "Nombre";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblUserName.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblWalletId
             // 

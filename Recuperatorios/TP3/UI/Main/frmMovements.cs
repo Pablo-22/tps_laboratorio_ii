@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks; 
-using Entities.DataBaseActions;
 using System.Windows.Forms;
 using Entities.WalletEntities;
 using Entities.SystemCore;
@@ -29,10 +28,12 @@ namespace UI
 
         private void frmMovements_Load(object sender, EventArgs e)
         {
-
             LoadWalletData();
         }
 
+        /// <summary>
+        /// Crea un user control ucMovement por cada movimiento de la wallet, con los datos del mismo.
+        /// </summary>
         public void LoadWalletData()
         {
             pnlMovements.Controls.Clear();
@@ -50,6 +51,11 @@ namespace UI
             });
         }
 
+        /// <summary>
+        /// Añade un movimiento a la wallet.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAddMovement_Click(object sender, EventArgs e)
         {
             frmNewExpenseDialog newExpense = new frmNewExpenseDialog();
