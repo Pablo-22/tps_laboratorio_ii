@@ -77,6 +77,7 @@ namespace Entities.WalletEntities
             StringBuilder movementInfo = new StringBuilder();
             movementInfo.Append(this.Id + " - ");
             movementInfo.Append(this.Amount + " - ");
+            movementInfo.Append(this.PurchaseDate.ToString("d") + " - ");
             movementInfo.Append("Wallet ID: " + this.idWallet);
 
             return movementInfo.ToString();

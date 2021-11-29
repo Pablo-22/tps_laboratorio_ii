@@ -77,6 +77,7 @@ namespace UI
             }
         }
 
+
         private void loadStats()
         {
             pnlStats.Controls.Clear();
@@ -104,6 +105,38 @@ namespace UI
         {
             loadHeaderValues();
             loadStats();
+        }
+
+        /// <summary>
+        /// Resetea los labels del formulario.
+        /// </summary>
+        /// <returns></returns>
+        public void ResetDefaultText()
+        {
+            int index = 0;
+            int x = 0;
+            int y = 0;
+
+            lblIncomesPercentage.Text = "Cargando...";
+
+            lblMonthName.Text = "Cargando...";
+
+            lblExpensesPercentage.Text = "Cargando...";
+
+            pnlStats.Controls.Clear();
+            Bank.ExpensesCategories.ForEach(category =>
+            {
+                pnlStats.Controls.Add(new ucStat());
+                pnlStats.Controls[index].Location = new Point(x, y);
+                y += 135;
+                index++;
+            });
+        }
+
+        public void LoadStats()
+        {
+            loadStats();
+            loadHeaderValues();
         }
 
         private void frmStats_Load(object sender, EventArgs e)

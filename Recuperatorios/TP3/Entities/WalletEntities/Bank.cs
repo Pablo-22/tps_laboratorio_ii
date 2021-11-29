@@ -74,7 +74,22 @@ namespace Entities.WalletEntities
 
             for (int i = 0; i < Bank.Users.Count; i++)
             {
-                Bank.ConnectUserWithWallet(Users[i].Id, Wallets[i].Id);
+                Random random = new Random();
+                for (int j = 0; j < 30; j++)
+                {
+                    int type = random.Next(0, 1);
+                    string category;
+                    if (type == 0)
+                    {
+                        category = Bank.expensesCategories[random.Next(0, 5)];
+                    }
+                    else
+                    {
+                        category = Bank.incomesCategories[random.Next(0, 5)];
+                    }
+                    Bank.ConnectUserWithWallet(Users[i].Id, Wallets[i].Id);
+                    Wallets[i].MoneyMovements.Add(new Movement(random.Next(100, 25000), Wallets[i].Id, Core.RandomDay(random), (Movement.eType)random.Next(0, 1), category));
+                }
             }
         }
 

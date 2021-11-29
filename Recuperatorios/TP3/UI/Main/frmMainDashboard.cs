@@ -24,6 +24,10 @@ namespace UI
         private bool statsIsActive;
         private bool movementsIsActive;
 
+        public event EventHandler logIn;
+        public event EventHandler logOut;
+
+
         public bool FrmMovementsIsActive
         {
             get { return movementsIsActive; }
@@ -61,9 +65,24 @@ namespace UI
             LoadUserData();
         }
 
+        private void onLogIn(object sender, EventArgs e)
+        {
+            stats.LoadStats();
+            movements.LoadWalletData();
+            this.LoadUserData();
+        }
+
+        private void onLogOut(object sender, EventArgs e)
+        {
+            this.IsLogged(false);
+            stats.ResetDefaultText();
+        }
+
         private void frmMainDashboard_Load(object sender, EventArgs e)
         {
             movements.newMovement += onNewMovement;
+            this.logIn += onLogIn;
+            this.logOut += onLogOut;
             this.IsLogged(false);
 
             BankSnapshot snapshot = new BankSnapshot(Bank.Users, Bank.Wallets);
@@ -71,7 +90,7 @@ namespace UI
             Json<BankSnapshot> snapshotIO = new Json<BankSnapshot>();
             try
             {
-                snapshotIO.Import(PathsGenerator.JsonPath, snapshot.Id.ToString(), ref snapshot);
+                snapshotIO.Import(PathsGenerator.JsonPath, snapshot.Id.ToString() + ".json", ref snapshot);
                 Bank.LoadFromSnapshot(snapshot);
             }
             catch
@@ -137,12 +156,14 @@ namespace UI
                 {
                     this.IsLogged(true);
                     this.LoadUserData();
+                    this.logIn.Invoke(this, null);
                 }
             }
             else
             {
                 Core.LogOut();
                 this.IsLogged(false);
+                this.logOut.Invoke(this, null);
             }
         }
         private void IsLogged(bool isLogged)
@@ -166,6 +187,8 @@ namespace UI
                 this.statsIsActive = false;
             }
         }
+
+        
 
         private void btnSave_Click(object sender, EventArgs e)
         {

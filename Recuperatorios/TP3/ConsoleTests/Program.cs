@@ -4,6 +4,7 @@ using Entities.InputOutput;
 using Entities.WalletEntities;
 using Entities.SystemCore;
 using Entities.DataBaseActions;
+using System.Text.Json;
 
 namespace ConsoleTests
 {
@@ -11,35 +12,60 @@ namespace ConsoleTests
     {
         static void Main(string[] args)
         {
-            /*
-            TextFile test = new TextFile("mi nombre es Pablo");
-            Txt file = new Txt();
+            BankSnapshot snapshot = new BankSnapshot(Bank.Users, Bank.Wallets);
 
-            file.Export(test);
-            */
+            Json<BankSnapshot> snapshotIO = new Json<BankSnapshot>();
+            try
+            {
+                snapshotIO.Import(PathsGenerator.JsonPath, snapshot.Id.ToString(), ref snapshot);
+                Bank.LoadFromSnapshot(snapshot);
+            }
+            catch
+            {
+                try
+                {
+                    if (!File.Exists("-1.json"))
+                    {
+                        throw new PathDoNotExistException();
+                    }
+                    string dataCollected = File.ReadAllText("-1.json");
+                    snapshot = JsonSerializer.Deserialize<BankSnapshot>(dataCollected);
+                    Bank.LoadFromSnapshot(snapshot);
+                }
+                catch
+                {
+                    Bank.Hardcode();
+                }
+            }
 
-            //User test = new User();
 
-            //file.Import(@"textFiles\0.txt",out test);
+            Core.LogIn("Pablo", "12345");
 
-            //Xml<User> xmlFile = new Xml<User>();
+            Console.WriteLine("Usuario: " + Core.ActualUser.Name);
+            Console.WriteLine("*********** Balance *********** ");
+            Console.WriteLine("*********** $" + Core.UserWallet.Balance + " *********** \n");
+            Console.WriteLine("*********** Movimientos *********** ");
 
-            //xmlFile.Export(test);
+            Core.UserWallet.MoneyMovements.ForEach(movement =>
+            {
+                Console.WriteLine(movement.ToString() + "\n");
+            });
 
-            //xmlFile.Import(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\TextFilesInformation\2.xml"), ref test);
+            Console.WriteLine("\n**** TOTAL POR CATEGORÍA **** \n");
 
-            Core.GetProjectConfig();
+            float monthTotal = 0;
+            float previousMonthTotal = 0;
+            float percentage = 0;
+            bool nowIsMore;
+            bool initialValueIsNull;
 
-            //DbService.getUsers();
-            //Wallet wallet = DbService.GetWalletById(1);
-            //wallet.MoneyMovements = DbService.GetMovements(wallet.Id);
-
-            User user = DbService.GetUserByCredentials("gjhgfh", "54354rtfd");
-
-
-            Console.WriteLine("fin");
-            //DbService.getMovements(5);
-        
+            Bank.ExpensesCategories.ForEach(category =>
+            {
+                monthTotal = Core.UserWallet.getMonthTotal(DateTime.Now, Movement.eType.Gasto, category);
+                percentage = Core.UserWallet.CompareNowWithPreviousMonth(Movement.eType.Gasto, category, out nowIsMore, out initialValueIsNull);
+                previousMonthTotal = Core.UserWallet.getMonthTotal(DateTime.Now.AddMonths(-1), Movement.eType.Gasto, category);
+                Console.WriteLine("CATEGORÍA: " + category + " || TOTAL DEL MES: " + monthTotal + " || MES ANTERIOR: " + previousMonthTotal);
+            });
         }
     }
 }

@@ -46,7 +46,8 @@ namespace Entities.InputOutput
         {
             try
             {
-                if (File.Exists(Path.Combine(path, fileName)) )
+                string fullPath = Path.Combine(path, fileName);
+                if (File.Exists(fullPath) )
                 {
                     string dataCollected = File.ReadAllText(Path.Combine(path + fileName));
                     if (!string.IsNullOrEmpty(dataCollected))

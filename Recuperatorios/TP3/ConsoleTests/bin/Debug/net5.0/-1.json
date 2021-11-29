@@ -1,0 +1,1981 @@
+{
+  "Users": [
+    {
+      "Password": "12345",
+      "IdWallet": 1,
+      "Name": "Pablo",
+      "TextInfo": "Soy admin",
+      "Id": 1
+    },
+    {
+      "Password": "Nazarena",
+      "IdWallet": 2,
+      "Name": "Nazarena",
+      "TextInfo": "",
+      "Id": 2
+    },
+    {
+      "Password": "Pedro",
+      "IdWallet": 3,
+      "Name": "Pedro",
+      "TextInfo": "",
+      "Id": 3
+    },
+    {
+      "Password": "Pepe",
+      "IdWallet": 4,
+      "Name": "Pepe",
+      "TextInfo": "",
+      "Id": 4
+    },
+    {
+      "Password": "Martin",
+      "IdWallet": 5,
+      "Name": "Martin",
+      "TextInfo": "",
+      "Id": 5
+    },
+    {
+      "Password": "julio",
+      "IdWallet": 22,
+      "Name": "julio",
+      "TextInfo": "-",
+      "Id": 7
+    },
+    {
+      "Password": "Natalia",
+      "IdWallet": 23,
+      "Name": "Natalia",
+      "TextInfo": "-",
+      "Id": 8
+    },
+    {
+      "Password": "Claudia",
+      "IdWallet": 25,
+      "Name": "Claudia",
+      "TextInfo": "-",
+      "Id": 10
+    }
+  ],
+  "Wallets": [
+    {
+      "Balance": 0,
+      "MoneyMovements": [],
+      "TextInfo": null,
+      "Id": -1
+    },
+    {
+      "Balance": 46803,
+      "MoneyMovements": [
+        {
+          "Amount": 273.78,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-14T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 276
+        },
+        {
+          "Amount": 22486.75,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-15T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 285
+        },
+        {
+          "Amount": 29791.81,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-22T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 289
+        },
+        {
+          "Amount": 8452.72,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-16T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 297
+        },
+        {
+          "Amount": 3783.84,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-14T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 299
+        },
+        {
+          "Amount": 22748.84,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-13T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 305
+        },
+        {
+          "Amount": 539.02,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-17T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 307
+        },
+        {
+          "Amount": 8095.31,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-31T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 308
+        },
+        {
+          "Amount": 17946.36,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-03T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 313
+        },
+        {
+          "Amount": 15259.1,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-04T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 314
+        },
+        {
+          "Amount": 28910.48,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-08T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 317
+        },
+        {
+          "Amount": 2132.04,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-27T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 320
+        },
+        {
+          "Amount": 24875.88,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-02T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 326
+        },
+        {
+          "Amount": 24272.51,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-09T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 338
+        },
+        {
+          "Amount": 5574.03,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-05T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 339
+        },
+        {
+          "Amount": 12086.46,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-13T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 346
+        },
+        {
+          "Amount": 18317.9,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-25T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 352
+        },
+        {
+          "Amount": 24474.08,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-12T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 357
+        },
+        {
+          "Amount": 23149.92,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-11-15T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 362
+        },
+        {
+          "Amount": 8277.57,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-05T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 366
+        },
+        {
+          "Amount": 22171.61,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-08T00:00:00",
+          "IdWallet": 1,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 370
+        },
+        {
+          "Amount": 3896.38,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-21T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 377
+        },
+        {
+          "Amount": 23874.93,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-11-02T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 386
+        },
+        {
+          "Amount": 23980.76,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-23T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 390
+        },
+        {
+          "Amount": 28968,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-12T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 394
+        },
+        {
+          "Amount": 3445.21,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-20T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 396
+        },
+        {
+          "Amount": 24839.09,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-07T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 400
+        },
+        {
+          "Amount": 19691.82,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-21T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 401
+        },
+        {
+          "Amount": 17007.59,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-14T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 402
+        },
+        {
+          "Amount": 23419.76,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-21T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 406
+        },
+        {
+          "Amount": 2918.74,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-22T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 408
+        },
+        {
+          "Amount": 28927.6,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-09T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 409
+        },
+        {
+          "Amount": 25282.12,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-02T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 411
+        },
+        {
+          "Amount": 3056.1,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-08T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 413
+        },
+        {
+          "Amount": 23594.44,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-29T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 423
+        },
+        {
+          "Amount": 147.87,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-10T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 426
+        },
+        {
+          "Amount": 7603.22,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-11-03T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 433
+        },
+        {
+          "Amount": 21938.89,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-11-03T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 434
+        },
+        {
+          "Amount": 22292.51,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-16T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 439
+        },
+        {
+          "Amount": 14438.52,
+          "Category": "Varios",
+          "PurchaseDate": "2021-11-11T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 444
+        },
+        {
+          "Amount": 18125.08,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-22T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 466
+        },
+        {
+          "Amount": 3309.46,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-09T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 469
+        },
+        {
+          "Amount": 9804.73,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-26T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 470
+        },
+        {
+          "Amount": 28196.61,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-02T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 471
+        },
+        {
+          "Amount": 800,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-11-19T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 472
+        },
+        {
+          "Amount": 20000,
+          "Category": "Varios",
+          "PurchaseDate": "2021-11-21T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 473
+        },
+        {
+          "Amount": 15642,
+          "Category": "Varios",
+          "PurchaseDate": "2021-11-21T00:00:00",
+          "IdWallet": 1,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 474
+        }
+      ],
+      "TextInfo": null,
+      "Id": 1
+    },
+    {
+      "Balance": 66433,
+      "MoneyMovements": [
+        {
+          "Amount": 857.83,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-11-11T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 288
+        },
+        {
+          "Amount": 6264.72,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-07T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 294
+        },
+        {
+          "Amount": 28217.42,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-27T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 302
+        },
+        {
+          "Amount": 10475.41,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-21T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 304
+        },
+        {
+          "Amount": 29343.36,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-25T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 309
+        },
+        {
+          "Amount": 28241.17,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-19T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 310
+        },
+        {
+          "Amount": 23543.9,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-14T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 316
+        },
+        {
+          "Amount": 242.09,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-17T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 321
+        },
+        {
+          "Amount": 28880.15,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-14T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 328
+        },
+        {
+          "Amount": 27238.01,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-11-09T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 333
+        },
+        {
+          "Amount": 15674.39,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-11-16T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 343
+        },
+        {
+          "Amount": 28392.98,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-11T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 345
+        },
+        {
+          "Amount": 18033.35,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-31T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 347
+        },
+        {
+          "Amount": 18549.05,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-11-16T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 349
+        },
+        {
+          "Amount": 8155.41,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-11-06T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 351
+        },
+        {
+          "Amount": 26394.79,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-11-15T00:00:00",
+          "IdWallet": 2,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 365
+        },
+        {
+          "Amount": 23846.36,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-11-02T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 372
+        },
+        {
+          "Amount": 5638.06,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-10T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 374
+        },
+        {
+          "Amount": 16138.29,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-16T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 378
+        },
+        {
+          "Amount": 7520.26,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-11-15T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 381
+        },
+        {
+          "Amount": 17877.96,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-11-06T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 383
+        },
+        {
+          "Amount": 19587.69,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-04T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 384
+        },
+        {
+          "Amount": 3714.91,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-17T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 391
+        },
+        {
+          "Amount": 6503.94,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-23T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 398
+        },
+        {
+          "Amount": 11882.54,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-03T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 414
+        },
+        {
+          "Amount": 12762.97,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-17T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 415
+        },
+        {
+          "Amount": 25817.15,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-11-08T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 416
+        },
+        {
+          "Amount": 26444.66,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-08T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 419
+        },
+        {
+          "Amount": 23520.27,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-02T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 424
+        },
+        {
+          "Amount": 1511.21,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-10T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 431
+        },
+        {
+          "Amount": 18959.96,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-11-15T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 437
+        },
+        {
+          "Amount": 4370.51,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-15T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 441
+        },
+        {
+          "Amount": 26376.11,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-11-10T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 447
+        },
+        {
+          "Amount": 13196.62,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-23T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 449
+        },
+        {
+          "Amount": 9805.87,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-02T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 450
+        },
+        {
+          "Amount": 28777.66,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-31T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 454
+        },
+        {
+          "Amount": 25508.11,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-28T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 456
+        },
+        {
+          "Amount": 23008.03,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-11-08T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 457
+        },
+        {
+          "Amount": 12738.35,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-08T00:00:00",
+          "IdWallet": 2,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 468
+        }
+      ],
+      "TextInfo": null,
+      "Id": 2
+    },
+    {
+      "Balance": 2226,
+      "MoneyMovements": [
+        {
+          "Amount": 2907.09,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-07T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 273
+        },
+        {
+          "Amount": 15546.11,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-01T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 283
+        },
+        {
+          "Amount": 9676.62,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-30T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 286
+        },
+        {
+          "Amount": 20179.49,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-06T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 296
+        },
+        {
+          "Amount": 7650.62,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-16T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 303
+        },
+        {
+          "Amount": 7509.98,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-20T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 315
+        },
+        {
+          "Amount": 12341.64,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-11-15T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 318
+        },
+        {
+          "Amount": 1481.45,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-30T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 323
+        },
+        {
+          "Amount": 29525.2,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-21T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 324
+        },
+        {
+          "Amount": 20391.73,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-11-01T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 325
+        },
+        {
+          "Amount": 5872.33,
+          "Category": "Varios",
+          "PurchaseDate": "2021-11-13T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 327
+        },
+        {
+          "Amount": 23166.19,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-13T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 329
+        },
+        {
+          "Amount": 29272.73,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-22T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 330
+        },
+        {
+          "Amount": 2709.53,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-24T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 331
+        },
+        {
+          "Amount": 18110.42,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-11-11T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 334
+        },
+        {
+          "Amount": 17527.99,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-26T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 335
+        },
+        {
+          "Amount": 18951.11,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-21T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 356
+        },
+        {
+          "Amount": 23323.77,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-23T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 363
+        },
+        {
+          "Amount": 9141.73,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-01T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 364
+        },
+        {
+          "Amount": 23183.08,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-11T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 367
+        },
+        {
+          "Amount": 19511.52,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-30T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 368
+        },
+        {
+          "Amount": 28410.56,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-06T00:00:00",
+          "IdWallet": 3,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 369
+        },
+        {
+          "Amount": 17997.52,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-11-13T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 373
+        },
+        {
+          "Amount": 2831.78,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-02T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 375
+        },
+        {
+          "Amount": 23758.04,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-02T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 379
+        },
+        {
+          "Amount": 6607.26,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-02T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 387
+        },
+        {
+          "Amount": 3357.3,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-13T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 392
+        },
+        {
+          "Amount": 4648.47,
+          "Category": "Varios",
+          "PurchaseDate": "2021-11-08T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 395
+        },
+        {
+          "Amount": 2166.98,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-11-01T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 399
+        },
+        {
+          "Amount": 3495.6,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-04T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 404
+        },
+        {
+          "Amount": 17003.59,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-14T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 412
+        },
+        {
+          "Amount": 26587.08,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-08T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 418
+        },
+        {
+          "Amount": 10758,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-14T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 425
+        },
+        {
+          "Amount": 2564.84,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-17T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 428
+        },
+        {
+          "Amount": 4509.96,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-24T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 429
+        },
+        {
+          "Amount": 6724.65,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-11T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 430
+        },
+        {
+          "Amount": 29833.28,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-10T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 436
+        },
+        {
+          "Amount": 8156.41,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-04T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 438
+        },
+        {
+          "Amount": 2183.01,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-17T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 442
+        },
+        {
+          "Amount": 27671.2,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-22T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 445
+        },
+        {
+          "Amount": 15771.86,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-04T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 451
+        },
+        {
+          "Amount": 28640.89,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-11-02T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 452
+        },
+        {
+          "Amount": 5722.38,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-11-02T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 455
+        },
+        {
+          "Amount": 14886.43,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-02T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 458
+        },
+        {
+          "Amount": 18331.36,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-10T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 463
+        },
+        {
+          "Amount": 13677,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-28T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 464
+        },
+        {
+          "Amount": 19471.18,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-20T00:00:00",
+          "IdWallet": 3,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 467
+        }
+      ],
+      "TextInfo": null,
+      "Id": 3
+    },
+    {
+      "Balance": 9387,
+      "MoneyMovements": [
+        {
+          "Amount": 29415.13,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-17T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 275
+        },
+        {
+          "Amount": 15311.54,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-06T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 277
+        },
+        {
+          "Amount": 28186.14,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-18T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 278
+        },
+        {
+          "Amount": 6243.33,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-09T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 279
+        },
+        {
+          "Amount": 9781.83,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-18T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 280
+        },
+        {
+          "Amount": 28311.68,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-24T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 281
+        },
+        {
+          "Amount": 15868.2,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-13T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 284
+        },
+        {
+          "Amount": 20628.69,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-06T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 290
+        },
+        {
+          "Amount": 26210.49,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-01T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 293
+        },
+        {
+          "Amount": 6915.51,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-11-06T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 298
+        },
+        {
+          "Amount": 3472.72,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-01T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 300
+        },
+        {
+          "Amount": 5267.48,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-05T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 301
+        },
+        {
+          "Amount": 27980.01,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-30T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 312
+        },
+        {
+          "Amount": 21487.2,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-30T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 319
+        },
+        {
+          "Amount": 3851.38,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-11-05T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 322
+        },
+        {
+          "Amount": 7671.47,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-29T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 332
+        },
+        {
+          "Amount": 29351.33,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-13T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 337
+        },
+        {
+          "Amount": 1132.82,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-11-05T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 353
+        },
+        {
+          "Amount": 17477.79,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-07T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 354
+        },
+        {
+          "Amount": 24684.75,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-09T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 359
+        },
+        {
+          "Amount": 24691.47,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-29T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 360
+        },
+        {
+          "Amount": 22256.7,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-05T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 361
+        },
+        {
+          "Amount": 18167.64,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-03T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 371
+        },
+        {
+          "Amount": 13029.21,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-06T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 376
+        },
+        {
+          "Amount": 17494.41,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-11-16T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 382
+        },
+        {
+          "Amount": 20352.83,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-15T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 385
+        },
+        {
+          "Amount": 24334.88,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-02T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 389
+        },
+        {
+          "Amount": 24592.93,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-29T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 397
+        },
+        {
+          "Amount": 14406.74,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-21T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 405
+        },
+        {
+          "Amount": 23168.56,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-11-13T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 407
+        },
+        {
+          "Amount": 22452.62,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-17T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 410
+        },
+        {
+          "Amount": 22351.77,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-01T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 417
+        },
+        {
+          "Amount": 5738.93,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-04T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 427
+        },
+        {
+          "Amount": 13708.69,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-16T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 440
+        },
+        {
+          "Amount": 23211.36,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-18T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 459
+        },
+        {
+          "Amount": 9068.33,
+          "Category": "Varios",
+          "PurchaseDate": "2021-11-03T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 460
+        },
+        {
+          "Amount": 25200.61,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-09T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 462
+        },
+        {
+          "Amount": 5588.73,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-11T00:00:00",
+          "IdWallet": 4,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 465
+        },
+        {
+          "Amount": 6823,
+          "Category": "Varios",
+          "PurchaseDate": "2021-11-21T00:00:00",
+          "IdWallet": 4,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 475
+        }
+      ],
+      "TextInfo": null,
+      "Id": 4
+    },
+    {
+      "Balance": 3245,
+      "MoneyMovements": [
+        {
+          "Amount": 22000.57,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-11-04T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 272
+        },
+        {
+          "Amount": 24097.44,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-09T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 274
+        },
+        {
+          "Amount": 23947.2,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-08T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 282
+        },
+        {
+          "Amount": 26314.81,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-18T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 287
+        },
+        {
+          "Amount": 17370.34,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-10-27T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 291
+        },
+        {
+          "Amount": 11959.23,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-27T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 292
+        },
+        {
+          "Amount": 8290.62,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-11-14T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 295
+        },
+        {
+          "Amount": 15642.24,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-18T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 306
+        },
+        {
+          "Amount": 9309.3,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-08T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 311
+        },
+        {
+          "Amount": 9313.71,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-27T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 336
+        },
+        {
+          "Amount": 6562.09,
+          "Category": "Indumentaria",
+          "PurchaseDate": "2021-11-15T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 340
+        },
+        {
+          "Amount": 11335.83,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-26T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 341
+        },
+        {
+          "Amount": 24693.12,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-27T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 342
+        },
+        {
+          "Amount": 19364.29,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-03T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 344
+        },
+        {
+          "Amount": 18408.93,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-05T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 348
+        },
+        {
+          "Amount": 13334.38,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-12T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 350
+        },
+        {
+          "Amount": 22279.02,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-05T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 355
+        },
+        {
+          "Amount": 28287.75,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-01T00:00:00",
+          "IdWallet": 5,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 358
+        },
+        {
+          "Amount": 28777.2,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-17T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 380
+        },
+        {
+          "Amount": 11102.7,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-25T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 388
+        },
+        {
+          "Amount": 6570.06,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-11-05T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 393
+        },
+        {
+          "Amount": 27731.59,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-11-11T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 403
+        },
+        {
+          "Amount": 15259.46,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-26T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 420
+        },
+        {
+          "Amount": 12148.01,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-11-07T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 421
+        },
+        {
+          "Amount": 21284.75,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-27T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 422
+        },
+        {
+          "Amount": 27888.25,
+          "Category": "Alimentos",
+          "PurchaseDate": "2021-10-19T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 432
+        },
+        {
+          "Amount": 6918.27,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-21T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 435
+        },
+        {
+          "Amount": 27946.01,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-27T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 443
+        },
+        {
+          "Amount": 22849.34,
+          "Category": "Varios",
+          "PurchaseDate": "2021-10-06T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 446
+        },
+        {
+          "Amount": 3645.63,
+          "Category": "Servicios",
+          "PurchaseDate": "2021-10-29T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 448
+        },
+        {
+          "Amount": 4244.25,
+          "Category": "Viajes",
+          "PurchaseDate": "2021-10-31T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 453
+        },
+        {
+          "Amount": 17435.93,
+          "Category": "Entretenimiento",
+          "PurchaseDate": "2021-10-04T00:00:00",
+          "IdWallet": 5,
+          "Type": 0,
+          "TextInfo": "",
+          "Id": 461
+        }
+      ],
+      "TextInfo": null,
+      "Id": 5
+    },
+    {
+      "Balance": 0,
+      "MoneyMovements": [],
+      "TextInfo": null,
+      "Id": 21
+    },
+    {
+      "Balance": 74232,
+      "MoneyMovements": [
+        {
+          "Amount": 74232,
+          "Category": "Varios",
+          "PurchaseDate": "2021-11-21T00:00:00",
+          "IdWallet": 22,
+          "Type": 1,
+          "TextInfo": "",
+          "Id": 476
+        }
+      ],
+      "TextInfo": null,
+      "Id": 22
+    },
+    {
+      "Balance": 0,
+      "MoneyMovements": [],
+      "TextInfo": null,
+      "Id": 23
+    },
+    {
+      "Balance": 0,
+      "MoneyMovements": [],
+      "TextInfo": null,
+      "Id": 24
+    },
+    {
+      "Balance": 0,
+      "MoneyMovements": [],
+      "TextInfo": null,
+      "Id": 25
+    }
+  ],
+  "TextInfo": null,
+  "Id": -1
+}

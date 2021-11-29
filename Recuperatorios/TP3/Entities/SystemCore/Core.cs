@@ -159,7 +159,7 @@ namespace Entities.SystemCore
         /// <param name="password"></param>
         /// <returns>Devuelve true si lo encuentra y false si no lo encuentra.
         /// Si puede loguear, cambia el estado del atributo UsuarioLogueado, por el usuario encontrado.</returns>
-        public static bool LoguearUsuario(string name, string password)
+        public static bool LogIn(string name, string password)
         {
             bool exit = false;
 
@@ -181,6 +181,77 @@ namespace Entities.SystemCore
         }
 
 
+        /// <summary>
+        /// Comprueba que no exista un usuario con el mismo nombre recibido por parámetro,
+        /// y si no lo encuentra, lo crea y lo añade a la lista.
+        /// </summary>
+        /// <param name="nombreDeUsuario"></param>
+        /// <param name="password"></param>
+        /// <returns>devuelve true si puede registrar, y false si no puede.</returns>
+        public static bool SignIn(string nombreDeUsuario, string password)
+        {
+            bool exit = false;
+            User newUser = new User();
+            newUser.Name = nombreDeUsuario;
+            newUser.Password = password;
+
+            if (HasNullFields(newUser) == false && !Core.UsuarioRepetido(newUser))
+            {
+                Core.SaveUser(newUser);
+                exit = true;
+            }
+            return exit;
+        }
+
+        /// <summary>
+        /// Comprueba que un usuario no contenga propiedades nulas
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns> Devuelve true si tiene nombre o password nula, false si no. </returns>
+        public static bool HasNullFields(User user)
+        {
+            if (user.Password == null || user.Name == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+        /// <summary>
+        /// Comprueba si ya existe un usuario con el mismo nombre y diferente id
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns> Retorna true si el usuario está repetido, false si no. </returns>
+        public static bool UsuarioRepetido(User usuario)
+        {
+            foreach (User item in Bank.Users)
+            {
+                if (item.Name == usuario.Name && item.Id != usuario.Id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        /// <summary>
+        /// Guarda un usuario en la lista.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns>Retorna el índice donde se guardó.</returns>
+        public static int SaveUser(User user)
+        {
+            Wallet wallet = new Wallet(0);
+            user.IdWallet = wallet.Id;
+            Bank.Users.Add(user);
+            Bank.Wallets.Add(wallet);
+            return Bank.Users.IndexOf(user);
+        }
+
+
+
         public static void GetProjectConfig()
         {
             ProjectConfigurationData config = new ProjectConfigurationData("testeando");
@@ -190,6 +261,14 @@ namespace Entities.SystemCore
             configDataSerializer.Import("", "config.json", ref config);
 
             Core.ConfigData = config;
+        }
+
+
+        public static DateTime RandomDay(Random gen)
+        {
+            DateTime start = new DateTime(2021, 10, 1);
+            int range = (DateTime.Today - start).Days;
+            return start.AddDays(gen.Next(range));
         }
     }
 }

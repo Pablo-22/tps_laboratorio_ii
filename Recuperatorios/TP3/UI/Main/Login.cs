@@ -33,7 +33,7 @@ namespace UI
             {
                 try
                 {
-                    Core.LoguearUsuario(txtNombreDeUsuario.Text, txtContrasenia.Text);
+                    Core.LogIn(txtNombreDeUsuario.Text, txtContrasenia.Text);
                     this.DialogResult = DialogResult.OK;
                 }
                 catch
@@ -58,7 +58,7 @@ namespace UI
         {
             if (string.IsNullOrEmpty(txtContrasenia.Text) == false && string.IsNullOrEmpty(txtNombreDeUsuario.Text) == false)
             {
-                if (Core.RegistrarUsuario(txtNombreDeUsuario.Text, txtContrasenia.Text) == true)
+                if (Core.SignIn(txtNombreDeUsuario.Text, txtContrasenia.Text) == true)
                 {
                     MessageBox.Show("Usuario registrado exitosamente.\nAhora ingrese sus credenciales para acceder.", "¡Genial!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();

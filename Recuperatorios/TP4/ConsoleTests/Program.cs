@@ -13,7 +13,7 @@ namespace ConsoleTests
         {
             try
             {
-                Core.GetProjectConfig()
+                Core.GetProjectConfig();
             }
             catch
             {

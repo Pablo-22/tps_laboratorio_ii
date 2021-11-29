@@ -33,7 +33,7 @@ namespace UI
             LoadWalletData();
         }
 
-        private void LoadWalletData()
+        public void LoadWalletData()
         {
             pnlMovements.Controls.Clear();
             int index = 0;
