@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "deHD0Izb9lISN3tvlUG0kPMOOOdN5bLNBouoNmT7eag2otli/GM4g8Kd8+ZzjEZPtKqu3FQM/ANasZIYNlSaqA==",
+  "dgSpecHash": "d6pcPdcgA0xe3Qg4KW7G7mURBhFeABLi/ivckUKC7SXUUDqkqkfMJg4aWgEIUi1kHmSlN73tnoi86qxl81al9g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\Recuperatorios\\TP4\\UI\\UI.csproj",
+  "projectFilePath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\RECUPERATORIOS\\TP4\\UI\\UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PabloCordoba\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\PabloCordoba\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

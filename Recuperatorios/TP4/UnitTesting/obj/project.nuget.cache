@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bFum6BUMFP9x4RkUs2Cs92vVEURu1wXNVLrOXtOfOzH8ujD/pqJ8rvmHpvO+O7f68pX5Dxy1hN1x/lnJ0m2P5A==",
+  "dgSpecHash": "mSC/eKUaa9uGa7EbCYrQHK8WUt+f3sq21xY+D9qa26ibbgdnJt9tizJJe2LwynXIFgwdmGQ7fcPFtRQtkDk2Hg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\Recuperatorios\\TP4\\UnitTesting\\UnitTesting.csproj",
+  "projectFilePath": "C:\\Users\\PabloCordoba\\Desktop\\Developing\\Repos TP\\tps_laboratorio_ii\\RECUPERATORIOS\\TP4\\UnitTesting\\UnitTesting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PabloCordoba\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\PabloCordoba\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",

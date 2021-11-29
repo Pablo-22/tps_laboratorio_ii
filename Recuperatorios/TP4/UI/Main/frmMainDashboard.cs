@@ -210,7 +210,7 @@ namespace UI
         /// <param name="e"></param>
         private void btnExport_Click(object sender, EventArgs e)
         {
-            /*UserSnapshot userSnapshot = new UserSnapshot(Core.CurrentUser.Name, Core.UserWallet);
+            UserSnapshot userSnapshot = new UserSnapshot(Core.CurrentUser.Name, Core.UserWallet);
 
             Json<UserSnapshot> jsonSnapshot = new Json<UserSnapshot>();
 
@@ -222,22 +222,7 @@ namespace UI
             catch (Exception)
             {
                 MessageBox.Show("No se ha podido exportar el archivo con los datos del usuario.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-
-
-            Bank.Users = DbService.GetUsers();
-            Bank.Wallets = DbService.GetWallets();
-
-            Bank.Wallets.ForEach(wallet =>
-            {
-                wallet.MoneyMovements = DbService.GetMovements(wallet.Id);
-            });
-
-            BankSnapshot bankSnapshot = new BankSnapshot(Bank.Users, Bank.Wallets);
-
-            Json<BankSnapshot> snapshotIO = new Json<BankSnapshot>();
-
-            snapshotIO.Export(PathsGenerator.JsonPath, bankSnapshot.Id.ToString() + ".json", bankSnapshot);
+            }
         }
 
         private void btnExit_MouseMove(object sender, MouseEventArgs e)
